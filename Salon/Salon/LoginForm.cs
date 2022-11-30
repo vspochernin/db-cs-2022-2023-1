@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace Salon
 {
-    public partial class log_in : Form
+    public partial class LoginForm : Form
     {
         DataBase database = new DataBase();
-        public log_in()
+        public LoginForm()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
@@ -24,16 +24,16 @@ namespace Salon
         private void log_in_Load(object sender, EventArgs e)
         {
             textBox_password.PasswordChar = '*';
-            textBox_login.MaxLength = 50;
-            textBox_password.MaxLength = 50;
         }
 
         private void button_enter_Click(object sender, EventArgs e)
         {
+            database.openConnection();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
             string login = textBox_login.Text;
             string password = Hashing.hashPassword(textBox_password.Text);
 
-            SqlDataAdapter adapter = new SqlDataAdapter();
             string loginsQueryString = $"select login_id, login, password from logins where login = '{login}' and password = '{password}'";
             SqlCommand loginsCommand = new SqlCommand(loginsQueryString, database.getConnection());
             adapter.SelectCommand = loginsCommand;
@@ -74,6 +74,15 @@ namespace Salon
             {
                 MessageBox.Show("Не удалось авторизироваться!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            database.closeConnection();
+        }
+
+        private void button_register_Click(object sender, EventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
+            this.Hide();
         }
     }
 }
