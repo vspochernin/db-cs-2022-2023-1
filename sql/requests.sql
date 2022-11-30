@@ -146,7 +146,7 @@ GO
 /*- [x] Вывод отзывов к конкретной музыкальной записи (id музыкальной записи) (таблица **reviews**);*/
 
 CREATE PROCEDURE showReviewsOfRecord(@record_id AS int) AS
-	SELECT review_id AS 'Номер отзыва', reviews.record_id AS 'Артикул', title AS 'Название',
+	SELECT review_id AS 'Номер отзыва', client_id AS 'Номер клиента', reviews.record_id AS 'Артикул', title AS 'Название',
 		author AS 'Автор', text AS 'Текст рекомендации'
 	FROM reviews, records
 	WHERE reviews.record_id = @record_id AND records.record_id = @record_id;
@@ -162,12 +162,9 @@ GO
 /*- [x] Вывод конкретного заказа (id заказа) (таблицы **orders**, **orders_records**);*/
 
 CREATE PROCEDURE showOrderById(@order_id AS int) AS
-	SELECT orders.order_id AS 'Номер заказа', orders.client_id AS 'Номер клиента', orders.employee_id AS 'Номер сотрудника',
-	statuses.text AS 'Статус заказа', orders.amount AS 'Сумма заказа', orders.order_datetime AS 'Дата и время заказа',
-	orders_records.record_id AS 'Артикул', title AS 'Название', author AS 'Автор', orders_records.count AS 'Количество'
+	SELECT orders_records.record_id AS 'Артикул', title AS 'Название', author AS 'Автор', orders_records.count AS 'Количество'
 	FROM orders
 		JOIN orders_records ON orders_records.order_id = orders.order_id
-		JOIN statuses ON orders.status_id = statuses.status_id
 		JOIN records ON records.record_id = orders_records.record_id
 		WHERE orders.order_id = @order_id;
 
@@ -180,16 +177,24 @@ GO
 /*- [x] Вывод всех рекомендаций конкретному клиенту (id клиента) (таблицы **recommendations**, **recommendations_records**);*/
 
 CREATE PROCEDURE showRecommendationsOfClient(@client_id AS int) AS
-	SELECT text AS 'Текст рекомендации', recommendations_records.record_id AS 'Артикул',
-		title AS 'Название', author AS 'Автор', employee_id FROM recommendations
+	SELECT recommendation_id AS 'Номер рекомендации', employee_id AS 'Номер сотрудника', client_id AS 'Номер клиента',
+		text AS 'Текст рекомендации', recommendation_datetime AS 'Дата и время рекомендации'
+		FROM recommendations
+		WHERE client_id = @client_id;
+
+CREATE PROCEDURE showRecommendationById(@recommendation_id AS int) AS
+	SELECT recommendations_records.record_id AS 'Артикул', title AS 'Название', author AS 'Автор'
+		FROM recommendations
 		JOIN recommendations_records ON recommendations_records.recommendation_id = recommendations.recommendation_id
 		JOIN records ON records.record_id = recommendations_records.record_id
-		WHERE recommendations.client_id = @client_id
+		WHERE recommendations.recommendation_id = @recommendation_id
 		ORDER BY recommendations.recommendation_id;
 
 GO
 
 EXEC showRecommendationsOfClient 1;
+
+EXEC showRecommendationById 1;
 
 GO
 
