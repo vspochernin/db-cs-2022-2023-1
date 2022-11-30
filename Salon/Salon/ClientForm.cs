@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Salon.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,12 +19,13 @@ namespace Salon
         public ClientForm()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void ClientForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSet.showAllStatuses". При необходимости она может быть перемещена или удалена.
-            this.showAllStatusesTableAdapter.Fill(this.salonDataSet.showAllStatuses);
+            textBox_password.PasswordChar = '*';
+            textBox_old_password.PasswordChar = '*';
             // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSet.showAllRecords". При необходимости она может быть перемещена или удалена.
             this.showAllRecordsTableAdapter.Fill(this.salonDataSet.showAllRecords);
             this.showReviewsOfRecordTableAdapter.Fill(this.salonDataSet.showReviewsOfRecord, (int)comboBox1.SelectedValue);
@@ -31,6 +33,11 @@ namespace Salon
             if (orderNumberBox.SelectedValue != null)
             {
                 this.showOrderByIdTableAdapter.Fill(this.salonDataSet.showOrderById, (int)orderNumberBox.SelectedValue);
+            }
+            this.showRecommendationsOfClientTableAdapter.Fill(this.salonDataSet.showRecommendationsOfClient, Globals.curUserId);
+            if (recommendationNumberBox.SelectedValue != null)
+            {
+                this.showRecommendationByIdTableAdapter.Fill(this.salonDataSet.showRecommendationById, (int)recommendationNumberBox.SelectedValue);
             }
         }
 
@@ -127,6 +134,98 @@ namespace Salon
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            dataBase.closeConnection();
+        }
+
+        private void recommendationNumberBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (recommendationNumberBox.SelectedValue != null)
+            {
+                this.showRecommendationByIdTableAdapter.Fill(this.salonDataSet.showRecommendationById, (int)recommendationNumberBox.SelectedValue);
+            }
+        }
+
+        private void uploadCurrentButton_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            string clientQuery = $"select * from clients where client_id = {Globals.curUserId}";
+            SqlCommand clientCommand = new SqlCommand(clientQuery, dataBase.getConnection());
+            DataTable clientTable = new DataTable();
+
+            adapter.SelectCommand = clientCommand;
+            adapter.Fill(clientTable);
+
+            string loginQuery = $"select * from logins where login_id = {Globals.curUserLoginId}";
+            SqlCommand loginCommand = new SqlCommand(loginQuery, dataBase.getConnection());
+            DataTable loginTable = new DataTable();
+
+            adapter.SelectCommand = loginCommand;
+            adapter.Fill(loginTable);
+
+            textBox_login.Text = loginTable.Rows[0][1].ToString();
+            textBox_first_name.Text = clientTable.Rows[0][1].ToString();
+            textBox_last_name.Text = clientTable.Rows[0][2].ToString();
+            textBox_email.Text = clientTable.Rows[0][3].ToString();
+            textBox_address.Text = clientTable.Rows[0][4].ToString();
+            monthCalendar_dob.SelectionStart = DateTime.Parse(clientTable.Rows[0][6].ToString());
+            monthCalendar_dob.SelectionEnd = DateTime.Parse(clientTable.Rows[0][6].ToString());
+            textBox_phone.Text = clientTable.Rows[0][7].ToString();
+
+
+            dataBase.closeConnection();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            string oldPassword = textBox_old_password.Text;
+            string hashOldPassword = Hashing.hashPassword(oldPassword);
+
+            string newPassword = textBox_password.Text;
+
+            string loginQuery = $"select * from logins where login_id = {Globals.curUserLoginId} and password = '{hashOldPassword}'";
+            SqlCommand loginCommand = new SqlCommand(loginQuery, dataBase.getConnection());
+            DataTable loginTable = new DataTable();
+
+            adapter.SelectCommand = loginCommand;
+            adapter.Fill(loginTable);
+
+            if (loginTable.Rows.Count == 0)
+            {
+                MessageBox.Show("Неправильно введен старый пароль!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+                string login = textBox_login.Text;
+                string password = (newPassword != null) ? Hashing.hashPassword(newPassword) : hashOldPassword;
+                string first_name = textBox_first_name.Text;
+                string last_name = textBox_last_name.Text;
+                string email = textBox_email.Text;
+                string address = textBox_address.Text;
+                string dob = monthCalendar_dob.SelectionRange.Start.ToString("yyyy-MM-dd");
+                string phone = textBox_phone.Text;
+
+                string updateClientQuery = $"exec updateClient {Globals.curUserId}, '{first_name}', '{last_name}', '{email}', '{login}', '{password}', '{address}', '{dob}', {phone}"; ;
+                SqlCommand updateClientCommand = new SqlCommand(updateClientQuery, dataBase.getConnection());
+
+                try
+                {
+                    if (updateClientCommand.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Успешно изменены данные пользователя!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             dataBase.closeConnection();

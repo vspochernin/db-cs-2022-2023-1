@@ -8,6 +8,7 @@ namespace Salon
 {
     internal static class Globals
     {
-        public static int curUserId = 0;
+        public static int curUserId = -1;
+        public static int curUserLoginId = -1;
     }
 }

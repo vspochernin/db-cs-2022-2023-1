@@ -69,6 +69,7 @@ namespace Salon
                 {
                     MessageBox.Show($"Здравствуйте, {clientsTable.Rows[0][1].ToString()}!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Globals.curUserId = (int)clientsTable.Rows[0][0];
+                    Globals.curUserLoginId = int.Parse(loginId);
                     ClientForm clientForm = new ClientForm();
                     clientForm.Show();
                     this.Hide();
