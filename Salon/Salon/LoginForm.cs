@@ -68,6 +68,10 @@ namespace Salon
                 } else if (clientsTable.Rows.Count > 0)
                 {
                     MessageBox.Show($"Здравствуйте, {clientsTable.Rows[0][1].ToString()}!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Globals.curUserId = (int)clientsTable.Rows[0][0];
+                    ClientForm clientForm = new ClientForm();
+                    clientForm.Show();
+                    this.Hide();
                 }
             }
             else
