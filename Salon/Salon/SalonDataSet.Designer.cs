@@ -64,6 +64,8 @@ namespace Salon {
         
         private showOrdersByClientIdDataTable tableshowOrdersByClientId;
         
+        private showRecommendationByIdDataTable tableshowRecommendationById;
+        
         private showRecommendationsOfClientDataTable tableshowRecommendationsOfClient;
         
         private showReviewsOfRecordDataTable tableshowReviewsOfRecord;
@@ -181,6 +183,9 @@ namespace Salon {
                 }
                 if ((ds.Tables["showOrdersByClientId"] != null)) {
                     base.Tables.Add(new showOrdersByClientIdDataTable(ds.Tables["showOrdersByClientId"]));
+                }
+                if ((ds.Tables["showRecommendationById"] != null)) {
+                    base.Tables.Add(new showRecommendationByIdDataTable(ds.Tables["showRecommendationById"]));
                 }
                 if ((ds.Tables["showRecommendationsOfClient"] != null)) {
                     base.Tables.Add(new showRecommendationsOfClientDataTable(ds.Tables["showRecommendationsOfClient"]));
@@ -410,6 +415,16 @@ namespace Salon {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public showRecommendationByIdDataTable showRecommendationById {
+            get {
+                return this.tableshowRecommendationById;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public showRecommendationsOfClientDataTable showRecommendationsOfClient {
             get {
                 return this.tableshowRecommendationsOfClient;
@@ -552,6 +567,9 @@ namespace Salon {
                 }
                 if ((ds.Tables["showOrdersByClientId"] != null)) {
                     base.Tables.Add(new showOrdersByClientIdDataTable(ds.Tables["showOrdersByClientId"]));
+                }
+                if ((ds.Tables["showRecommendationById"] != null)) {
+                    base.Tables.Add(new showRecommendationByIdDataTable(ds.Tables["showRecommendationById"]));
                 }
                 if ((ds.Tables["showRecommendationsOfClient"] != null)) {
                     base.Tables.Add(new showRecommendationsOfClientDataTable(ds.Tables["showRecommendationsOfClient"]));
@@ -712,6 +730,12 @@ namespace Salon {
                     this.tableshowOrdersByClientId.InitVars();
                 }
             }
+            this.tableshowRecommendationById = ((showRecommendationByIdDataTable)(base.Tables["showRecommendationById"]));
+            if ((initTable == true)) {
+                if ((this.tableshowRecommendationById != null)) {
+                    this.tableshowRecommendationById.InitVars();
+                }
+            }
             this.tableshowRecommendationsOfClient = ((showRecommendationsOfClientDataTable)(base.Tables["showRecommendationsOfClient"]));
             if ((initTable == true)) {
                 if ((this.tableshowRecommendationsOfClient != null)) {
@@ -787,6 +811,8 @@ namespace Salon {
             base.Tables.Add(this.tableshowOrdersByClientEmail);
             this.tableshowOrdersByClientId = new showOrdersByClientIdDataTable();
             base.Tables.Add(this.tableshowOrdersByClientId);
+            this.tableshowRecommendationById = new showRecommendationByIdDataTable();
+            base.Tables.Add(this.tableshowRecommendationById);
             this.tableshowRecommendationsOfClient = new showRecommendationsOfClientDataTable();
             base.Tables.Add(this.tableshowRecommendationsOfClient);
             this.tableshowReviewsOfRecord = new showReviewsOfRecordDataTable();
@@ -967,6 +993,12 @@ namespace Salon {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeshowRecommendationById() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeshowRecommendationsOfClient() {
             return false;
         }
@@ -1091,6 +1123,9 @@ namespace Salon {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void showOrdersByClientIdRowChangeEventHandler(object sender, showOrdersByClientIdRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void showRecommendationByIdRowChangeEventHandler(object sender, showRecommendationByIdRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void showRecommendationsOfClientRowChangeEventHandler(object sender, showRecommendationsOfClientRowChangeEvent e);
@@ -6455,18 +6490,6 @@ namespace Salon {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class showOrderByIdDataTable : global::System.Data.TypedTableBase<showOrderByIdRow> {
             
-            private global::System.Data.DataColumn columnНомер_заказа;
-            
-            private global::System.Data.DataColumn columnНомер_клиента;
-            
-            private global::System.Data.DataColumn columnНомер_сотрудника;
-            
-            private global::System.Data.DataColumn columnСтатус_заказа;
-            
-            private global::System.Data.DataColumn columnСумма_заказа;
-            
-            private global::System.Data.DataColumn columnДата_и_время_заказа;
-            
             private global::System.Data.DataColumn columnАртикул;
             
             private global::System.Data.DataColumn columnНазвание;
@@ -6506,54 +6529,6 @@ namespace Salon {
             protected showOrderByIdDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Номер_заказаColumn {
-                get {
-                    return this.columnНомер_заказа;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Номер_клиентаColumn {
-                get {
-                    return this.columnНомер_клиента;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Номер_сотрудникаColumn {
-                get {
-                    return this.columnНомер_сотрудника;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Статус_заказаColumn {
-                get {
-                    return this.columnСтатус_заказа;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Сумма_заказаColumn {
-                get {
-                    return this.columnСумма_заказа;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Дата_и_время_заказаColumn {
-                get {
-                    return this.columnДата_и_время_заказа;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6625,15 +6600,9 @@ namespace Salon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public showOrderByIdRow AddshowOrderByIdRow(int Номер_клиента, int Номер_сотрудника, string Статус_заказа, decimal Сумма_заказа, System.DateTime Дата_и_время_заказа, int Артикул, string Название, string Автор, int Количество) {
+            public showOrderByIdRow AddshowOrderByIdRow(int Артикул, string Название, string Автор, int Количество) {
                 showOrderByIdRow rowshowOrderByIdRow = ((showOrderByIdRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        Номер_клиента,
-                        Номер_сотрудника,
-                        Статус_заказа,
-                        Сумма_заказа,
-                        Дата_и_время_заказа,
                         Артикул,
                         Название,
                         Автор,
@@ -6641,13 +6610,6 @@ namespace Salon {
                 rowshowOrderByIdRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowshowOrderByIdRow);
                 return rowshowOrderByIdRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public showOrderByIdRow FindByНомер_заказа(int Номер_заказа) {
-                return ((showOrderByIdRow)(this.Rows.Find(new object[] {
-                            Номер_заказа})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6667,12 +6629,6 @@ namespace Salon {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnНомер_заказа = base.Columns["Номер заказа"];
-                this.columnНомер_клиента = base.Columns["Номер клиента"];
-                this.columnНомер_сотрудника = base.Columns["Номер сотрудника"];
-                this.columnСтатус_заказа = base.Columns["Статус заказа"];
-                this.columnСумма_заказа = base.Columns["Сумма заказа"];
-                this.columnДата_и_время_заказа = base.Columns["Дата и время заказа"];
                 this.columnАртикул = base.Columns["Артикул"];
                 this.columnНазвание = base.Columns["Название"];
                 this.columnАвтор = base.Columns["Автор"];
@@ -6682,18 +6638,6 @@ namespace Salon {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnНомер_заказа = new global::System.Data.DataColumn("Номер заказа", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnНомер_заказа);
-                this.columnНомер_клиента = new global::System.Data.DataColumn("Номер клиента", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnНомер_клиента);
-                this.columnНомер_сотрудника = new global::System.Data.DataColumn("Номер сотрудника", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnНомер_сотрудника);
-                this.columnСтатус_заказа = new global::System.Data.DataColumn("Статус заказа", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnСтатус_заказа);
-                this.columnСумма_заказа = new global::System.Data.DataColumn("Сумма заказа", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnСумма_заказа);
-                this.columnДата_и_время_заказа = new global::System.Data.DataColumn("Дата и время заказа", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnДата_и_время_заказа);
                 this.columnАртикул = new global::System.Data.DataColumn("Артикул", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnАртикул);
                 this.columnНазвание = new global::System.Data.DataColumn("Название", typeof(string), null, global::System.Data.MappingType.Element);
@@ -6702,17 +6646,6 @@ namespace Salon {
                 base.Columns.Add(this.columnАвтор);
                 this.columnКоличество = new global::System.Data.DataColumn("Количество", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnКоличество);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnНомер_заказа}, true));
-                this.columnНомер_заказа.AutoIncrement = true;
-                this.columnНомер_заказа.AllowDBNull = false;
-                this.columnНомер_заказа.ReadOnly = true;
-                this.columnНомер_заказа.Unique = true;
-                this.columnНомер_клиента.AllowDBNull = false;
-                this.columnСтатус_заказа.AllowDBNull = false;
-                this.columnСтатус_заказа.MaxLength = 50;
-                this.columnСумма_заказа.AllowDBNull = false;
-                this.columnДата_и_время_заказа.AllowDBNull = false;
                 this.columnАртикул.AllowDBNull = false;
                 this.columnНазвание.AllowDBNull = false;
                 this.columnНазвание.MaxLength = 50;
@@ -7520,9 +7453,7 @@ namespace Salon {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class showRecommendationsOfClientDataTable : global::System.Data.TypedTableBase<showRecommendationsOfClientRow> {
-            
-            private global::System.Data.DataColumn columnТекст_рекомендации;
+        public partial class showRecommendationByIdDataTable : global::System.Data.TypedTableBase<showRecommendationByIdRow> {
             
             private global::System.Data.DataColumn columnАртикул;
             
@@ -7530,7 +7461,289 @@ namespace Salon {
             
             private global::System.Data.DataColumn columnАвтор;
             
-            private global::System.Data.DataColumn columnemployee_id;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public showRecommendationByIdDataTable() {
+                this.TableName = "showRecommendationById";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal showRecommendationByIdDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected showRecommendationByIdDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn АртикулColumn {
+                get {
+                    return this.columnАртикул;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn НазваниеColumn {
+                get {
+                    return this.columnНазвание;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn АвторColumn {
+                get {
+                    return this.columnАвтор;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public showRecommendationByIdRow this[int index] {
+                get {
+                    return ((showRecommendationByIdRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event showRecommendationByIdRowChangeEventHandler showRecommendationByIdRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event showRecommendationByIdRowChangeEventHandler showRecommendationByIdRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event showRecommendationByIdRowChangeEventHandler showRecommendationByIdRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event showRecommendationByIdRowChangeEventHandler showRecommendationByIdRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddshowRecommendationByIdRow(showRecommendationByIdRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public showRecommendationByIdRow AddshowRecommendationByIdRow(int Артикул, string Название, string Автор) {
+                showRecommendationByIdRow rowshowRecommendationByIdRow = ((showRecommendationByIdRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Артикул,
+                        Название,
+                        Автор};
+                rowshowRecommendationByIdRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowshowRecommendationByIdRow);
+                return rowshowRecommendationByIdRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                showRecommendationByIdDataTable cln = ((showRecommendationByIdDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new showRecommendationByIdDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnАртикул = base.Columns["Артикул"];
+                this.columnНазвание = base.Columns["Название"];
+                this.columnАвтор = base.Columns["Автор"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnАртикул = new global::System.Data.DataColumn("Артикул", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnАртикул);
+                this.columnНазвание = new global::System.Data.DataColumn("Название", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНазвание);
+                this.columnАвтор = new global::System.Data.DataColumn("Автор", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnАвтор);
+                this.columnАртикул.AllowDBNull = false;
+                this.columnНазвание.AllowDBNull = false;
+                this.columnНазвание.MaxLength = 50;
+                this.columnАвтор.AllowDBNull = false;
+                this.columnАвтор.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public showRecommendationByIdRow NewshowRecommendationByIdRow() {
+                return ((showRecommendationByIdRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new showRecommendationByIdRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(showRecommendationByIdRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.showRecommendationByIdRowChanged != null)) {
+                    this.showRecommendationByIdRowChanged(this, new showRecommendationByIdRowChangeEvent(((showRecommendationByIdRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.showRecommendationByIdRowChanging != null)) {
+                    this.showRecommendationByIdRowChanging(this, new showRecommendationByIdRowChangeEvent(((showRecommendationByIdRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.showRecommendationByIdRowDeleted != null)) {
+                    this.showRecommendationByIdRowDeleted(this, new showRecommendationByIdRowChangeEvent(((showRecommendationByIdRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.showRecommendationByIdRowDeleting != null)) {
+                    this.showRecommendationByIdRowDeleting(this, new showRecommendationByIdRowChangeEvent(((showRecommendationByIdRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveshowRecommendationByIdRow(showRecommendationByIdRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                SalonDataSet ds = new SalonDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "showRecommendationByIdDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class showRecommendationsOfClientDataTable : global::System.Data.TypedTableBase<showRecommendationsOfClientRow> {
+            
+            private global::System.Data.DataColumn columnНомер_рекомендации;
+            
+            private global::System.Data.DataColumn columnНомер_сотрудника;
+            
+            private global::System.Data.DataColumn columnНомер_клиента;
+            
+            private global::System.Data.DataColumn columnТекст_рекомендации;
+            
+            private global::System.Data.DataColumn columnДата_и_время_рекомендации;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -7567,6 +7780,30 @@ namespace Salon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Номер_рекомендацииColumn {
+                get {
+                    return this.columnНомер_рекомендации;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Номер_сотрудникаColumn {
+                get {
+                    return this.columnНомер_сотрудника;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Номер_клиентаColumn {
+                get {
+                    return this.columnНомер_клиента;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Текст_рекомендацииColumn {
                 get {
                     return this.columnТекст_рекомендации;
@@ -7575,33 +7812,9 @@ namespace Salon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn АртикулColumn {
+            public global::System.Data.DataColumn Дата_и_время_рекомендацииColumn {
                 get {
-                    return this.columnАртикул;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn НазваниеColumn {
-                get {
-                    return this.columnНазвание;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn АвторColumn {
-                get {
-                    return this.columnАвтор;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn employee_idColumn {
-                get {
-                    return this.columnemployee_id;
+                    return this.columnДата_и_время_рекомендации;
                 }
             }
             
@@ -7642,17 +7855,24 @@ namespace Salon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public showRecommendationsOfClientRow AddshowRecommendationsOfClientRow(string Текст_рекомендации, int Артикул, string Название, string Автор, int employee_id) {
+            public showRecommendationsOfClientRow AddshowRecommendationsOfClientRow(int Номер_сотрудника, int Номер_клиента, string Текст_рекомендации, System.DateTime Дата_и_время_рекомендации) {
                 showRecommendationsOfClientRow rowshowRecommendationsOfClientRow = ((showRecommendationsOfClientRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
+                        Номер_сотрудника,
+                        Номер_клиента,
                         Текст_рекомендации,
-                        Артикул,
-                        Название,
-                        Автор,
-                        employee_id};
+                        Дата_и_время_рекомендации};
                 rowshowRecommendationsOfClientRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowshowRecommendationsOfClientRow);
                 return rowshowRecommendationsOfClientRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public showRecommendationsOfClientRow FindByНомер_рекомендации(int Номер_рекомендации) {
+                return ((showRecommendationsOfClientRow)(this.Rows.Find(new object[] {
+                            Номер_рекомендации})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7672,34 +7892,37 @@ namespace Salon {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnНомер_рекомендации = base.Columns["Номер рекомендации"];
+                this.columnНомер_сотрудника = base.Columns["Номер сотрудника"];
+                this.columnНомер_клиента = base.Columns["Номер клиента"];
                 this.columnТекст_рекомендации = base.Columns["Текст рекомендации"];
-                this.columnАртикул = base.Columns["Артикул"];
-                this.columnНазвание = base.Columns["Название"];
-                this.columnАвтор = base.Columns["Автор"];
-                this.columnemployee_id = base.Columns["employee_id"];
+                this.columnДата_и_время_рекомендации = base.Columns["Дата и время рекомендации"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnНомер_рекомендации = new global::System.Data.DataColumn("Номер рекомендации", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНомер_рекомендации);
+                this.columnНомер_сотрудника = new global::System.Data.DataColumn("Номер сотрудника", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНомер_сотрудника);
+                this.columnНомер_клиента = new global::System.Data.DataColumn("Номер клиента", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНомер_клиента);
                 this.columnТекст_рекомендации = new global::System.Data.DataColumn("Текст рекомендации", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnТекст_рекомендации);
-                this.columnАртикул = new global::System.Data.DataColumn("Артикул", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnАртикул);
-                this.columnНазвание = new global::System.Data.DataColumn("Название", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnНазвание);
-                this.columnАвтор = new global::System.Data.DataColumn("Автор", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnАвтор);
-                this.columnemployee_id = new global::System.Data.DataColumn("employee_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnemployee_id);
+                this.columnДата_и_время_рекомендации = new global::System.Data.DataColumn("Дата и время рекомендации", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnДата_и_время_рекомендации);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnНомер_рекомендации}, true));
+                this.columnНомер_рекомендации.AutoIncrement = true;
+                this.columnНомер_рекомендации.AllowDBNull = false;
+                this.columnНомер_рекомендации.ReadOnly = true;
+                this.columnНомер_рекомендации.Unique = true;
+                this.columnНомер_сотрудника.AllowDBNull = false;
+                this.columnНомер_клиента.AllowDBNull = false;
                 this.columnТекст_рекомендации.AllowDBNull = false;
                 this.columnТекст_рекомендации.MaxLength = 1073741823;
-                this.columnАртикул.AllowDBNull = false;
-                this.columnНазвание.AllowDBNull = false;
-                this.columnНазвание.MaxLength = 50;
-                this.columnАвтор.AllowDBNull = false;
-                this.columnАвтор.MaxLength = 50;
-                this.columnemployee_id.AllowDBNull = false;
+                this.columnДата_и_время_рекомендации.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7835,6 +8058,8 @@ namespace Salon {
             
             private global::System.Data.DataColumn columnНомер_отзыва;
             
+            private global::System.Data.DataColumn columnНомер_клиента;
+            
             private global::System.Data.DataColumn columnАртикул;
             
             private global::System.Data.DataColumn columnНазвание;
@@ -7881,6 +8106,14 @@ namespace Salon {
             public global::System.Data.DataColumn Номер_отзываColumn {
                 get {
                     return this.columnНомер_отзыва;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Номер_клиентаColumn {
+                get {
+                    return this.columnНомер_клиента;
                 }
             }
             
@@ -7953,10 +8186,11 @@ namespace Salon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public showReviewsOfRecordRow AddshowReviewsOfRecordRow(int Артикул, string Название, string Автор, string Текст_рекомендации) {
+            public showReviewsOfRecordRow AddshowReviewsOfRecordRow(int Номер_клиента, int Артикул, string Название, string Автор, string Текст_рекомендации) {
                 showReviewsOfRecordRow rowshowReviewsOfRecordRow = ((showReviewsOfRecordRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
+                        Номер_клиента,
                         Артикул,
                         Название,
                         Автор,
@@ -7991,6 +8225,7 @@ namespace Salon {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnНомер_отзыва = base.Columns["Номер отзыва"];
+                this.columnНомер_клиента = base.Columns["Номер клиента"];
                 this.columnАртикул = base.Columns["Артикул"];
                 this.columnНазвание = base.Columns["Название"];
                 this.columnАвтор = base.Columns["Автор"];
@@ -8002,6 +8237,8 @@ namespace Salon {
             private void InitClass() {
                 this.columnНомер_отзыва = new global::System.Data.DataColumn("Номер отзыва", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnНомер_отзыва);
+                this.columnНомер_клиента = new global::System.Data.DataColumn("Номер клиента", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНомер_клиента);
                 this.columnАртикул = new global::System.Data.DataColumn("Артикул", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnАртикул);
                 this.columnНазвание = new global::System.Data.DataColumn("Название", typeof(string), null, global::System.Data.MappingType.Element);
@@ -8016,6 +8253,7 @@ namespace Salon {
                 this.columnНомер_отзыва.AllowDBNull = false;
                 this.columnНомер_отзыва.ReadOnly = true;
                 this.columnНомер_отзыва.Unique = true;
+                this.columnНомер_клиента.AllowDBNull = false;
                 this.columnАртикул.AllowDBNull = false;
                 this.columnНазвание.AllowDBNull = false;
                 this.columnНазвание.MaxLength = 50;
@@ -9576,77 +9814,6 @@ namespace Salon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Номер_заказа {
-                get {
-                    return ((int)(this[this.tableshowOrderById.Номер_заказаColumn]));
-                }
-                set {
-                    this[this.tableshowOrderById.Номер_заказаColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Номер_клиента {
-                get {
-                    return ((int)(this[this.tableshowOrderById.Номер_клиентаColumn]));
-                }
-                set {
-                    this[this.tableshowOrderById.Номер_клиентаColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Номер_сотрудника {
-                get {
-                    try {
-                        return ((int)(this[this.tableshowOrderById.Номер_сотрудникаColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Номер сотрудника\' в таблице \'showOrderById\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableshowOrderById.Номер_сотрудникаColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Статус_заказа {
-                get {
-                    return ((string)(this[this.tableshowOrderById.Статус_заказаColumn]));
-                }
-                set {
-                    this[this.tableshowOrderById.Статус_заказаColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal Сумма_заказа {
-                get {
-                    return ((decimal)(this[this.tableshowOrderById.Сумма_заказаColumn]));
-                }
-                set {
-                    this[this.tableshowOrderById.Сумма_заказаColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime Дата_и_время_заказа {
-                get {
-                    return ((global::System.DateTime)(this[this.tableshowOrderById.Дата_и_время_заказаColumn]));
-                }
-                set {
-                    this[this.tableshowOrderById.Дата_и_время_заказаColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Артикул {
                 get {
                     return ((int)(this[this.tableshowOrderById.АртикулColumn]));
@@ -9687,18 +9854,6 @@ namespace Salon {
                 set {
                     this[this.tableshowOrderById.КоличествоColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsНомер_сотрудникаNull() {
-                return this.IsNull(this.tableshowOrderById.Номер_сотрудникаColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetНомер_сотрудникаNull() {
-                this[this.tableshowOrderById.Номер_сотрудникаColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -9903,6 +10058,54 @@ namespace Salon {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
+        public partial class showRecommendationByIdRow : global::System.Data.DataRow {
+            
+            private showRecommendationByIdDataTable tableshowRecommendationById;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal showRecommendationByIdRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableshowRecommendationById = ((showRecommendationByIdDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Артикул {
+                get {
+                    return ((int)(this[this.tableshowRecommendationById.АртикулColumn]));
+                }
+                set {
+                    this[this.tableshowRecommendationById.АртикулColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Название {
+                get {
+                    return ((string)(this[this.tableshowRecommendationById.НазваниеColumn]));
+                }
+                set {
+                    this[this.tableshowRecommendationById.НазваниеColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Автор {
+                get {
+                    return ((string)(this[this.tableshowRecommendationById.АвторColumn]));
+                }
+                set {
+                    this[this.tableshowRecommendationById.АвторColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
         public partial class showRecommendationsOfClientRow : global::System.Data.DataRow {
             
             private showRecommendationsOfClientDataTable tableshowRecommendationsOfClient;
@@ -9912,6 +10115,39 @@ namespace Salon {
             internal showRecommendationsOfClientRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableshowRecommendationsOfClient = ((showRecommendationsOfClientDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Номер_рекомендации {
+                get {
+                    return ((int)(this[this.tableshowRecommendationsOfClient.Номер_рекомендацииColumn]));
+                }
+                set {
+                    this[this.tableshowRecommendationsOfClient.Номер_рекомендацииColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Номер_сотрудника {
+                get {
+                    return ((int)(this[this.tableshowRecommendationsOfClient.Номер_сотрудникаColumn]));
+                }
+                set {
+                    this[this.tableshowRecommendationsOfClient.Номер_сотрудникаColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Номер_клиента {
+                get {
+                    return ((int)(this[this.tableshowRecommendationsOfClient.Номер_клиентаColumn]));
+                }
+                set {
+                    this[this.tableshowRecommendationsOfClient.Номер_клиентаColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9927,45 +10163,12 @@ namespace Salon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Артикул {
+            public System.DateTime Дата_и_время_рекомендации {
                 get {
-                    return ((int)(this[this.tableshowRecommendationsOfClient.АртикулColumn]));
+                    return ((global::System.DateTime)(this[this.tableshowRecommendationsOfClient.Дата_и_время_рекомендацииColumn]));
                 }
                 set {
-                    this[this.tableshowRecommendationsOfClient.АртикулColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Название {
-                get {
-                    return ((string)(this[this.tableshowRecommendationsOfClient.НазваниеColumn]));
-                }
-                set {
-                    this[this.tableshowRecommendationsOfClient.НазваниеColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Автор {
-                get {
-                    return ((string)(this[this.tableshowRecommendationsOfClient.АвторColumn]));
-                }
-                set {
-                    this[this.tableshowRecommendationsOfClient.АвторColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int employee_id {
-                get {
-                    return ((int)(this[this.tableshowRecommendationsOfClient.employee_idColumn]));
-                }
-                set {
-                    this[this.tableshowRecommendationsOfClient.employee_idColumn] = value;
+                    this[this.tableshowRecommendationsOfClient.Дата_и_время_рекомендацииColumn] = value;
                 }
             }
         }
@@ -9992,6 +10195,17 @@ namespace Salon {
                 }
                 set {
                     this[this.tableshowReviewsOfRecord.Номер_отзываColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Номер_клиента {
+                get {
+                    return ((int)(this[this.tableshowReviewsOfRecord.Номер_клиентаColumn]));
+                }
+                set {
+                    this[this.tableshowReviewsOfRecord.Номер_клиентаColumn] = value;
                 }
             }
             
@@ -10706,6 +10920,40 @@ namespace Salon {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public showOrdersByClientIdRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class showRecommendationByIdRowChangeEvent : global::System.EventArgs {
+            
+            private showRecommendationByIdRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public showRecommendationByIdRowChangeEvent(showRecommendationByIdRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public showRecommendationByIdRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -15451,12 +15699,6 @@ SELECT review_id, record_id, client_id, text FROM reviews WHERE (review_id = @re
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "showOrderById";
-            tableMapping.ColumnMappings.Add("Номер заказа", "Номер заказа");
-            tableMapping.ColumnMappings.Add("Номер клиента", "Номер клиента");
-            tableMapping.ColumnMappings.Add("Номер сотрудника", "Номер сотрудника");
-            tableMapping.ColumnMappings.Add("Статус заказа", "Статус заказа");
-            tableMapping.ColumnMappings.Add("Сумма заказа", "Сумма заказа");
-            tableMapping.ColumnMappings.Add("Дата и время заказа", "Дата и время заказа");
             tableMapping.ColumnMappings.Add("Артикул", "Артикул");
             tableMapping.ColumnMappings.Add("Название", "Название");
             tableMapping.ColumnMappings.Add("Автор", "Автор");
@@ -15901,6 +16143,189 @@ SELECT review_id, record_id, client_id, text FROM reviews WHERE (review_id = @re
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class showRecommendationByIdTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public showRecommendationByIdTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "showRecommendationById";
+            tableMapping.ColumnMappings.Add("Артикул", "Артикул");
+            tableMapping.ColumnMappings.Add("Название", "Название");
+            tableMapping.ColumnMappings.Add("Автор", "Автор");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Salon.Properties.Settings.Default.SalonConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.showRecommendationById";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@recommendation_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(SalonDataSet.showRecommendationByIdDataTable dataTable, global::System.Nullable<int> recommendation_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((recommendation_id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(recommendation_id.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual SalonDataSet.showRecommendationByIdDataTable GetData(global::System.Nullable<int> recommendation_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((recommendation_id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(recommendation_id.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            SalonDataSet.showRecommendationByIdDataTable dataTable = new SalonDataSet.showRecommendationByIdDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class showRecommendationsOfClientTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -16013,11 +16438,11 @@ SELECT review_id, record_id, client_id, text FROM reviews WHERE (review_id = @re
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "showRecommendationsOfClient";
+            tableMapping.ColumnMappings.Add("Номер рекомендации", "Номер рекомендации");
+            tableMapping.ColumnMappings.Add("Номер сотрудника", "Номер сотрудника");
+            tableMapping.ColumnMappings.Add("Номер клиента", "Номер клиента");
             tableMapping.ColumnMappings.Add("Текст рекомендации", "Текст рекомендации");
-            tableMapping.ColumnMappings.Add("Артикул", "Артикул");
-            tableMapping.ColumnMappings.Add("Название", "Название");
-            tableMapping.ColumnMappings.Add("Автор", "Автор");
-            tableMapping.ColumnMappings.Add("employee_id", "employee_id");
+            tableMapping.ColumnMappings.Add("Дата и время рекомендации", "Дата и время рекомендации");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -16199,6 +16624,7 @@ SELECT review_id, record_id, client_id, text FROM reviews WHERE (review_id = @re
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "showReviewsOfRecord";
             tableMapping.ColumnMappings.Add("Номер отзыва", "Номер отзыва");
+            tableMapping.ColumnMappings.Add("Номер клиента", "Номер клиента");
             tableMapping.ColumnMappings.Add("Артикул", "Артикул");
             tableMapping.ColumnMappings.Add("Название", "Название");
             tableMapping.ColumnMappings.Add("Автор", "Автор");
