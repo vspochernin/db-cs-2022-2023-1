@@ -106,10 +106,17 @@ namespace Salon
             string addRecordQuery = $"addRecord '{title}', '{author}', {price}, {count}";
             SqlCommand addRecordCommand = new SqlCommand(addRecordQuery, dataBase.getConnection());
 
-            if (addRecordCommand.ExecuteNonQuery() > 0)
+            try
             {
-                MessageBox.Show("Музыкальная запись успешно добавлена!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.showAllRecordsTableAdapter.Fill(this.salonDataSet.showAllRecords);
+                if (addRecordCommand.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Музыкальная запись успешно добавлена!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.showAllRecordsTableAdapter.Fill(this.salonDataSet.showAllRecords);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             dataBase.closeConnection();
@@ -131,10 +138,17 @@ namespace Salon
                 string updateRecordQuery = $"updateRecord {recordId}, '{title}', '{author}', {price}, {count}";
                 SqlCommand updateRecordCommand = new SqlCommand(updateRecordQuery, dataBase.getConnection());
 
-                if (updateRecordCommand.ExecuteNonQuery() > 0)
+                try
                 {
-                    MessageBox.Show("Музыкальная запись успешно изменена!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.showAllRecordsTableAdapter.Fill(this.salonDataSet.showAllRecords);
+                    if (updateRecordCommand.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Музыкальная запись успешно изменена!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.showAllRecordsTableAdapter.Fill(this.salonDataSet.showAllRecords);
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

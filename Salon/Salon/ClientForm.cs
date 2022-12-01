@@ -204,7 +204,7 @@ namespace Salon
             {
 
                 string login = textBox_login.Text;
-                string password = (newPassword != null) ? Hashing.hashPassword(newPassword) : hashOldPassword;
+                string password = (newPassword != null && newPassword != "") ? Hashing.hashPassword(newPassword) : hashOldPassword;
                 string first_name = textBox_first_name.Text;
                 string last_name = textBox_last_name.Text;
                 string email = textBox_email.Text;
