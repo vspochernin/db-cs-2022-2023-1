@@ -97,6 +97,8 @@
             this.текстРекомендацииDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.датаИВремяРекомендацииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.textBox_old_password = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.uploadCurrentButton = new System.Windows.Forms.Button();
             this.monthCalendar_dob = new System.Windows.Forms.MonthCalendar();
@@ -122,8 +124,6 @@
             this.showRecommendationsOfClientTableAdapter = new Salon.SalonDataSetTableAdapters.showRecommendationsOfClientTableAdapter();
             this.showRecommendationsOfClientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.showRecommendationByIdTableAdapter = new Salon.SalonDataSetTableAdapters.showRecommendationByIdTableAdapter();
-            this.textBox_old_password = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showAllRecordsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salonDataSet)).BeginInit();
@@ -521,6 +521,11 @@
             // countNumber
             // 
             this.countNumber.Location = new System.Drawing.Point(849, 454);
+            this.countNumber.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.countNumber.Name = "countNumber";
             this.countNumber.Size = new System.Drawing.Size(122, 31);
             this.countNumber.TabIndex = 7;
@@ -859,6 +864,25 @@
             this.tabPage4.Text = "Данные авторизации";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // textBox_old_password
+            // 
+            this.textBox_old_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_old_password.Location = new System.Drawing.Point(1342, 175);
+            this.textBox_old_password.Name = "textBox_old_password";
+            this.textBox_old_password.Size = new System.Drawing.Size(334, 44);
+            this.textBox_old_password.TabIndex = 39;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(1080, 175);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(256, 44);
+            this.label20.TabIndex = 38;
+            this.label20.Text = "Старый пароль:";
+            this.label20.UseCompatibleTextRendering = true;
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(1156, 20);
@@ -1058,25 +1082,6 @@
             // showRecommendationByIdTableAdapter
             // 
             this.showRecommendationByIdTableAdapter.ClearBeforeFill = true;
-            // 
-            // textBox_old_password
-            // 
-            this.textBox_old_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_old_password.Location = new System.Drawing.Point(1342, 175);
-            this.textBox_old_password.Name = "textBox_old_password";
-            this.textBox_old_password.Size = new System.Drawing.Size(334, 44);
-            this.textBox_old_password.TabIndex = 39;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(1080, 175);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(256, 44);
-            this.label20.TabIndex = 38;
-            this.label20.Text = "Старый пароль:";
-            this.label20.UseCompatibleTextRendering = true;
             // 
             // ClientForm
             // 

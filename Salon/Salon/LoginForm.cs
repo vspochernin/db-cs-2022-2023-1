@@ -61,11 +61,23 @@ namespace Salon
                 if (loginId == "1")
                 {
                     MessageBox.Show("Здравствуйте, Администратор!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Globals.curUserId = 0;
+                    Globals.curUserLoginId = int.Parse(loginId);
+                    /*                    AdminForm adminForm = new AdminForm();
+                                        adminForm.Show();
+                                        this.Hide();
+                    */
                 }
                 else if (employeesTable.Rows.Count > 0)
                 {
                     MessageBox.Show($"Здравствуйте, {employeesTable.Rows[0][1].ToString()}!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                } else if (clientsTable.Rows.Count > 0)
+                    Globals.curUserId = (int)employeesTable.Rows[0][0];
+                    Globals.curUserLoginId = int.Parse(loginId);
+                    EmployeeForm employeeForm = new EmployeeForm();
+                    employeeForm.Show();
+                    this.Hide();
+                }
+                else if (clientsTable.Rows.Count > 0)
                 {
                     MessageBox.Show($"Здравствуйте, {clientsTable.Rows[0][1].ToString()}!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Globals.curUserId = (int)clientsTable.Rows[0][0];
