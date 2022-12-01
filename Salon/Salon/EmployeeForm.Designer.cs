@@ -31,43 +31,147 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.salonDataSet = new Salon.SalonDataSet();
+            this.numericUpDown_count = new System.Windows.Forms.NumericUpDown();
+            this.textBox_price = new System.Windows.Forms.TextBox();
+            this.textBox_author = new System.Windows.Forms.TextBox();
+            this.textBox_title = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.updateRecordButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.recordIdBox = new System.Windows.Forms.ComboBox();
             this.showAllRecordsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.showAllRecordsTableAdapter = new Salon.SalonDataSetTableAdapters.showAllRecordsTableAdapter();
+            this.salonDataSet = new Salon.SalonDataSet();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.артикулDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.названиеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.авторDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ценаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.количествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.recordIdBox = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.updateRecordButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox_title = new System.Windows.Forms.TextBox();
-            this.textBox_author = new System.Windows.Forms.TextBox();
-            this.textBox_price = new System.Windows.Forms.TextBox();
-            this.numericUpDown_count = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.номерКлиентаDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.электроннаяПочтаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.адресDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаРожденияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерТелефонаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.showAllClientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.номерЗаказаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерКлиентаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерСотрудникаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.статусЗаказаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.суммаЗаказаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.showOrdersByClientEmailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.showOrdersByEmailButton = new System.Windows.Forms.Button();
+            this.emailBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.orderById = new System.Windows.Forms.DataGridView();
+            this.артикулDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.названиеDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.авторDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.количествоDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.showOrderByIdBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orderNumberBox = new System.Windows.Forms.ComboBox();
+            this.showAllOrdersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.номерЗаказаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерКлиентаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерСотрудникаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.статусЗаказаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.суммаЗаказаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.reviewNumberBox = new System.Windows.Forms.ComboBox();
+            this.showAllReviewsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label13 = new System.Windows.Forms.Label();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.номерОтзываDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.артикулDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.названиеЗаписиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерКлиентаDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.текстРекомендацииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label12 = new System.Windows.Forms.Label();
+            this.showAllRecordsTableAdapter = new Salon.SalonDataSetTableAdapters.showAllRecordsTableAdapter();
             this.clientsTableAdapter1 = new Salon.SalonDataSetTableAdapters.clientsTableAdapter();
+            this.showAllOrdersTableAdapter = new Salon.SalonDataSetTableAdapters.showAllOrdersTableAdapter();
+            this.showOrderByIdTableAdapter = new Salon.SalonDataSetTableAdapters.showOrderByIdTableAdapter();
+            this.showOrdersByClientEmailTableAdapter = new Salon.SalonDataSetTableAdapters.showOrdersByClientEmailTableAdapter();
+            this.showAllClientsTableAdapter = new Salon.SalonDataSetTableAdapters.showAllClientsTableAdapter();
+            this.showAllReviewsTableAdapter = new Salon.SalonDataSetTableAdapters.showAllReviewsTableAdapter();
+            this.removeReviewButton = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.label14 = new System.Windows.Forms.Label();
+            this.showAllRecommendationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.showAllRecommendationsTableAdapter = new Salon.SalonDataSetTableAdapters.showAllRecommendationsTableAdapter();
+            this.номерРекомендацииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерСотрудникаDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерКлиентаDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.текстРекомендацииDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаИВремяРекомендацииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.recommendationNumberBox = new System.Windows.Forms.ComboBox();
+            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.showRecommendationByIdBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.showRecommendationByIdTableAdapter = new Salon.SalonDataSetTableAdapters.showRecommendationByIdTableAdapter();
+            this.артикулDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.названиеDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.авторDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.showAllStatusesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.showAllStatusesTableAdapter = new Salon.SalonDataSetTableAdapters.showAllStatusesTableAdapter();
+            this.текстСтатусаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salonDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showAllRecordsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_count)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllRecordsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salonDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllClientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showOrdersByClientEmailBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderById)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showOrderByIdBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllOrdersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllReviewsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllRecommendationsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showRecommendationByIdBindingSource)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllStatusesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -96,27 +200,138 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1678, 945);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Музыкальные записи";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // numericUpDown_count
             // 
-            this.tabPage2.Location = new System.Drawing.Point(8, 39);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1678, 945);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.numericUpDown_count.Location = new System.Drawing.Point(147, 623);
+            this.numericUpDown_count.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numericUpDown_count.Name = "numericUpDown_count";
+            this.numericUpDown_count.Size = new System.Drawing.Size(401, 31);
+            this.numericUpDown_count.TabIndex = 13;
             // 
-            // label1
+            // textBox_price
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Все музыкальные записи:";
+            this.textBox_price.Location = new System.Drawing.Point(147, 573);
+            this.textBox_price.Name = "textBox_price";
+            this.textBox_price.Size = new System.Drawing.Size(401, 31);
+            this.textBox_price.TabIndex = 12;
+            // 
+            // textBox_author
+            // 
+            this.textBox_author.Location = new System.Drawing.Point(147, 529);
+            this.textBox_author.Name = "textBox_author";
+            this.textBox_author.Size = new System.Drawing.Size(401, 31);
+            this.textBox_author.TabIndex = 12;
+            // 
+            // textBox_title
+            // 
+            this.textBox_title.Location = new System.Drawing.Point(147, 484);
+            this.textBox_title.Name = "textBox_title";
+            this.textBox_title.Size = new System.Drawing.Size(401, 31);
+            this.textBox_title.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 625);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 25);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Количество:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(71, 579);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 25);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Цена:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(64, 529);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 25);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Автор:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 484);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 25);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Название:";
+            // 
+            // updateRecordButton
+            // 
+            this.updateRecordButton.Location = new System.Drawing.Point(1357, 344);
+            this.updateRecordButton.Name = "updateRecordButton";
+            this.updateRecordButton.Size = new System.Drawing.Size(315, 58);
+            this.updateRecordButton.TabIndex = 7;
+            this.updateRecordButton.Text = "Изменить";
+            this.updateRecordButton.UseVisualStyleBackColor = true;
+            this.updateRecordButton.Click += new System.EventHandler(this.updateRecordButton_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(986, 344);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(315, 58);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Добавить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(611, 344);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(315, 58);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Удалить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // recordIdBox
+            // 
+            this.recordIdBox.DataSource = this.showAllRecordsBindingSource;
+            this.recordIdBox.DisplayMember = "Название";
+            this.recordIdBox.FormattingEnabled = true;
+            this.recordIdBox.Location = new System.Drawing.Point(232, 358);
+            this.recordIdBox.Name = "recordIdBox";
+            this.recordIdBox.Size = new System.Drawing.Size(347, 33);
+            this.recordIdBox.TabIndex = 4;
+            this.recordIdBox.ValueMember = "Артикул";
+            this.recordIdBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // showAllRecordsBindingSource
+            // 
+            this.showAllRecordsBindingSource.DataMember = "showAllRecords";
+            this.showAllRecordsBindingSource.DataSource = this.salonDataSet;
+            // 
+            // salonDataSet
+            // 
+            this.salonDataSet.DataSetName = "SalonDataSet";
+            this.salonDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 361);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(229, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Музыкальная запись:";
             // 
             // dataGridView1
             // 
@@ -139,20 +354,6 @@
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(1661, 307);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // salonDataSet
-            // 
-            this.salonDataSet.DataSetName = "SalonDataSet";
-            this.salonDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // showAllRecordsBindingSource
-            // 
-            this.showAllRecordsBindingSource.DataMember = "showAllRecords";
-            this.showAllRecordsBindingSource.DataSource = this.salonDataSet;
-            // 
-            // showAllRecordsTableAdapter
-            // 
-            this.showAllRecordsTableAdapter.ClearBeforeFill = true;
             // 
             // артикулDataGridViewTextBoxColumn
             // 
@@ -199,129 +400,807 @@
             this.количествоDataGridViewTextBoxColumn.ReadOnly = true;
             this.количествоDataGridViewTextBoxColumn.Width = 174;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 361);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(229, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Музыкальная запись:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(274, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Все музыкальные записи:";
             // 
-            // recordIdBox
+            // tabPage2
             // 
-            this.recordIdBox.DataSource = this.showAllRecordsBindingSource;
-            this.recordIdBox.DisplayMember = "Название";
-            this.recordIdBox.FormattingEnabled = true;
-            this.recordIdBox.Location = new System.Drawing.Point(232, 358);
-            this.recordIdBox.Name = "recordIdBox";
-            this.recordIdBox.Size = new System.Drawing.Size(347, 33);
-            this.recordIdBox.TabIndex = 4;
-            this.recordIdBox.ValueMember = "Артикул";
-            this.recordIdBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.tabPage2.Controls.Add(this.dataGridView4);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.dataGridView3);
+            this.tabPage2.Controls.Add(this.showOrdersByEmailButton);
+            this.tabPage2.Controls.Add(this.emailBox);
+            this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.Controls.Add(this.orderById);
+            this.tabPage2.Controls.Add(this.orderNumberBox);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Location = new System.Drawing.Point(8, 39);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1678, 945);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Заказы и клиенты";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // dataGridView4
             // 
-            this.button1.Location = new System.Drawing.Point(611, 344);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(315, 58);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Удалить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.номерКлиентаDataGridViewTextBoxColumn2,
+            this.имяDataGridViewTextBoxColumn,
+            this.фамилияDataGridViewTextBoxColumn,
+            this.электроннаяПочтаDataGridViewTextBoxColumn,
+            this.адресDataGridViewTextBoxColumn,
+            this.датаРожденияDataGridViewTextBoxColumn,
+            this.номерТелефонаDataGridViewTextBoxColumn});
+            this.dataGridView4.DataSource = this.showAllClientsBindingSource;
+            this.dataGridView4.Location = new System.Drawing.Point(812, 475);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 82;
+            this.dataGridView4.RowTemplate.Height = 33;
+            this.dataGridView4.Size = new System.Drawing.Size(864, 459);
+            this.dataGridView4.TabIndex = 14;
             // 
-            // button2
+            // номерКлиентаDataGridViewTextBoxColumn2
             // 
-            this.button2.Location = new System.Drawing.Point(986, 344);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(315, 58);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Добавить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.номерКлиентаDataGridViewTextBoxColumn2.DataPropertyName = "Номер клиента";
+            this.номерКлиентаDataGridViewTextBoxColumn2.HeaderText = "Номер клиента";
+            this.номерКлиентаDataGridViewTextBoxColumn2.MinimumWidth = 10;
+            this.номерКлиентаDataGridViewTextBoxColumn2.Name = "номерКлиентаDataGridViewTextBoxColumn2";
+            this.номерКлиентаDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.номерКлиентаDataGridViewTextBoxColumn2.Width = 193;
             // 
-            // updateRecordButton
+            // имяDataGridViewTextBoxColumn
             // 
-            this.updateRecordButton.Location = new System.Drawing.Point(1357, 344);
-            this.updateRecordButton.Name = "updateRecordButton";
-            this.updateRecordButton.Size = new System.Drawing.Size(315, 58);
-            this.updateRecordButton.TabIndex = 7;
-            this.updateRecordButton.Text = "Изменить";
-            this.updateRecordButton.UseVisualStyleBackColor = true;
-            this.updateRecordButton.Click += new System.EventHandler(this.updateRecordButton_Click);
+            this.имяDataGridViewTextBoxColumn.DataPropertyName = "Имя";
+            this.имяDataGridViewTextBoxColumn.HeaderText = "Имя";
+            this.имяDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.имяDataGridViewTextBoxColumn.Name = "имяDataGridViewTextBoxColumn";
+            this.имяDataGridViewTextBoxColumn.Width = 98;
             // 
-            // label3
+            // фамилияDataGridViewTextBoxColumn
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 484);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 25);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Название:";
+            this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
+            this.фамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия";
+            this.фамилияDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.фамилияDataGridViewTextBoxColumn.Name = "фамилияDataGridViewTextBoxColumn";
+            this.фамилияDataGridViewTextBoxColumn.Width = 149;
             // 
-            // label4
+            // электроннаяПочтаDataGridViewTextBoxColumn
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(64, 529);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 25);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Автор:";
+            this.электроннаяПочтаDataGridViewTextBoxColumn.DataPropertyName = "Электронная почта";
+            this.электроннаяПочтаDataGridViewTextBoxColumn.HeaderText = "Электронная почта";
+            this.электроннаяПочтаDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.электроннаяПочтаDataGridViewTextBoxColumn.Name = "электроннаяПочтаDataGridViewTextBoxColumn";
+            this.электроннаяПочтаDataGridViewTextBoxColumn.Width = 230;
             // 
-            // label5
+            // адресDataGridViewTextBoxColumn
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(71, 579);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 25);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Цена:";
+            this.адресDataGridViewTextBoxColumn.DataPropertyName = "Адрес";
+            this.адресDataGridViewTextBoxColumn.HeaderText = "Адрес";
+            this.адресDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.адресDataGridViewTextBoxColumn.Name = "адресDataGridViewTextBoxColumn";
+            this.адресDataGridViewTextBoxColumn.Width = 118;
             // 
-            // label6
+            // датаРожденияDataGridViewTextBoxColumn
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 625);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 25);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Количество:";
+            this.датаРожденияDataGridViewTextBoxColumn.DataPropertyName = "Дата рождения";
+            this.датаРожденияDataGridViewTextBoxColumn.HeaderText = "Дата рождения";
+            this.датаРожденияDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.датаРожденияDataGridViewTextBoxColumn.Name = "датаРожденияDataGridViewTextBoxColumn";
+            this.датаРожденияDataGridViewTextBoxColumn.Width = 194;
             // 
-            // textBox_title
+            // номерТелефонаDataGridViewTextBoxColumn
             // 
-            this.textBox_title.Location = new System.Drawing.Point(147, 484);
-            this.textBox_title.Name = "textBox_title";
-            this.textBox_title.Size = new System.Drawing.Size(401, 31);
-            this.textBox_title.TabIndex = 12;
+            this.номерТелефонаDataGridViewTextBoxColumn.DataPropertyName = "Номер телефона";
+            this.номерТелефонаDataGridViewTextBoxColumn.HeaderText = "Номер телефона";
+            this.номерТелефонаDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.номерТелефонаDataGridViewTextBoxColumn.Name = "номерТелефонаDataGridViewTextBoxColumn";
+            this.номерТелефонаDataGridViewTextBoxColumn.Width = 209;
             // 
-            // textBox_author
+            // showAllClientsBindingSource
             // 
-            this.textBox_author.Location = new System.Drawing.Point(147, 529);
-            this.textBox_author.Name = "textBox_author";
-            this.textBox_author.Size = new System.Drawing.Size(401, 31);
-            this.textBox_author.TabIndex = 12;
+            this.showAllClientsBindingSource.DataMember = "showAllClients";
+            this.showAllClientsBindingSource.DataSource = this.salonDataSet;
             // 
-            // textBox_price
+            // label11
             // 
-            this.textBox_price.Location = new System.Drawing.Point(147, 573);
-            this.textBox_price.Name = "textBox_price";
-            this.textBox_price.Size = new System.Drawing.Size(401, 31);
-            this.textBox_price.TabIndex = 12;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(809, 430);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(145, 25);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Все клиенты:";
             // 
-            // numericUpDown_count
+            // dataGridView3
             // 
-            this.numericUpDown_count.Location = new System.Drawing.Point(147, 623);
-            this.numericUpDown_count.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numericUpDown_count.Name = "numericUpDown_count";
-            this.numericUpDown_count.Size = new System.Drawing.Size(401, 31);
-            this.numericUpDown_count.TabIndex = 13;
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.номерЗаказаDataGridViewTextBoxColumn1,
+            this.номерКлиентаDataGridViewTextBoxColumn1,
+            this.номерСотрудникаDataGridViewTextBoxColumn1,
+            this.статусЗаказаDataGridViewTextBoxColumn1,
+            this.суммаЗаказаDataGridViewTextBoxColumn1,
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn1});
+            this.dataGridView3.DataSource = this.showOrdersByClientEmailBindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(10, 535);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 82;
+            this.dataGridView3.RowTemplate.Height = 33;
+            this.dataGridView3.Size = new System.Drawing.Size(793, 400);
+            this.dataGridView3.TabIndex = 12;
+            // 
+            // номерЗаказаDataGridViewTextBoxColumn1
+            // 
+            this.номерЗаказаDataGridViewTextBoxColumn1.DataPropertyName = "Номер заказа";
+            this.номерЗаказаDataGridViewTextBoxColumn1.HeaderText = "Номер заказа";
+            this.номерЗаказаDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.номерЗаказаDataGridViewTextBoxColumn1.Name = "номерЗаказаDataGridViewTextBoxColumn1";
+            this.номерЗаказаDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.номерЗаказаDataGridViewTextBoxColumn1.Width = 182;
+            // 
+            // номерКлиентаDataGridViewTextBoxColumn1
+            // 
+            this.номерКлиентаDataGridViewTextBoxColumn1.DataPropertyName = "Номер клиента";
+            this.номерКлиентаDataGridViewTextBoxColumn1.HeaderText = "Номер клиента";
+            this.номерКлиентаDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.номерКлиентаDataGridViewTextBoxColumn1.Name = "номерКлиентаDataGridViewTextBoxColumn1";
+            this.номерКлиентаDataGridViewTextBoxColumn1.Width = 193;
+            // 
+            // номерСотрудникаDataGridViewTextBoxColumn1
+            // 
+            this.номерСотрудникаDataGridViewTextBoxColumn1.DataPropertyName = "Номер сотрудника";
+            this.номерСотрудникаDataGridViewTextBoxColumn1.HeaderText = "Номер сотрудника";
+            this.номерСотрудникаDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.номерСотрудникаDataGridViewTextBoxColumn1.Name = "номерСотрудникаDataGridViewTextBoxColumn1";
+            this.номерСотрудникаDataGridViewTextBoxColumn1.Width = 224;
+            // 
+            // статусЗаказаDataGridViewTextBoxColumn1
+            // 
+            this.статусЗаказаDataGridViewTextBoxColumn1.DataPropertyName = "Статус заказа";
+            this.статусЗаказаDataGridViewTextBoxColumn1.HeaderText = "Статус заказа";
+            this.статусЗаказаDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.статусЗаказаDataGridViewTextBoxColumn1.Name = "статусЗаказаDataGridViewTextBoxColumn1";
+            this.статусЗаказаDataGridViewTextBoxColumn1.Width = 185;
+            // 
+            // суммаЗаказаDataGridViewTextBoxColumn1
+            // 
+            this.суммаЗаказаDataGridViewTextBoxColumn1.DataPropertyName = "Сумма заказа";
+            this.суммаЗаказаDataGridViewTextBoxColumn1.HeaderText = "Сумма заказа";
+            this.суммаЗаказаDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.суммаЗаказаDataGridViewTextBoxColumn1.Name = "суммаЗаказаDataGridViewTextBoxColumn1";
+            this.суммаЗаказаDataGridViewTextBoxColumn1.Width = 184;
+            // 
+            // датаИВремяЗаказаDataGridViewTextBoxColumn1
+            // 
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn1.DataPropertyName = "Дата и время заказа";
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn1.HeaderText = "Дата и время заказа";
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn1.Name = "датаИВремяЗаказаDataGridViewTextBoxColumn1";
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn1.Width = 244;
+            // 
+            // showOrdersByClientEmailBindingSource
+            // 
+            this.showOrdersByClientEmailBindingSource.DataMember = "showOrdersByClientEmail";
+            this.showOrdersByClientEmailBindingSource.DataSource = this.salonDataSet;
+            // 
+            // showOrdersByEmailButton
+            // 
+            this.showOrdersByEmailButton.Location = new System.Drawing.Point(551, 473);
+            this.showOrdersByEmailButton.Name = "showOrdersByEmailButton";
+            this.showOrdersByEmailButton.Size = new System.Drawing.Size(253, 45);
+            this.showOrdersByEmailButton.TabIndex = 11;
+            this.showOrdersByEmailButton.Text = "Найти";
+            this.showOrdersByEmailButton.UseVisualStyleBackColor = true;
+            this.showOrdersByEmailButton.Click += new System.EventHandler(this.showOrdersByEmailButton_Click);
+            // 
+            // emailBox
+            // 
+            this.emailBox.Location = new System.Drawing.Point(306, 480);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(230, 31);
+            this.emailBox.TabIndex = 9;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 480);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(294, 25);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Все заказы клиента с email:";
+            // 
+            // orderById
+            // 
+            this.orderById.AllowUserToAddRows = false;
+            this.orderById.AllowUserToDeleteRows = false;
+            this.orderById.AutoGenerateColumns = false;
+            this.orderById.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.orderById.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orderById.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.артикулDataGridViewTextBoxColumn1,
+            this.названиеDataGridViewTextBoxColumn1,
+            this.авторDataGridViewTextBoxColumn1,
+            this.количествоDataGridViewTextBoxColumn1});
+            this.orderById.DataSource = this.showOrderByIdBindingSource;
+            this.orderById.Location = new System.Drawing.Point(814, 32);
+            this.orderById.Name = "orderById";
+            this.orderById.ReadOnly = true;
+            this.orderById.RowHeadersWidth = 82;
+            this.orderById.RowTemplate.Height = 33;
+            this.orderById.Size = new System.Drawing.Size(863, 379);
+            this.orderById.TabIndex = 7;
+            // 
+            // артикулDataGridViewTextBoxColumn1
+            // 
+            this.артикулDataGridViewTextBoxColumn1.DataPropertyName = "Артикул";
+            this.артикулDataGridViewTextBoxColumn1.HeaderText = "Артикул";
+            this.артикулDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.артикулDataGridViewTextBoxColumn1.Name = "артикулDataGridViewTextBoxColumn1";
+            this.артикулDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.артикулDataGridViewTextBoxColumn1.Width = 139;
+            // 
+            // названиеDataGridViewTextBoxColumn1
+            // 
+            this.названиеDataGridViewTextBoxColumn1.DataPropertyName = "Название";
+            this.названиеDataGridViewTextBoxColumn1.HeaderText = "Название";
+            this.названиеDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.названиеDataGridViewTextBoxColumn1.Name = "названиеDataGridViewTextBoxColumn1";
+            this.названиеDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.названиеDataGridViewTextBoxColumn1.Width = 154;
+            // 
+            // авторDataGridViewTextBoxColumn1
+            // 
+            this.авторDataGridViewTextBoxColumn1.DataPropertyName = "Автор";
+            this.авторDataGridViewTextBoxColumn1.HeaderText = "Автор";
+            this.авторDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.авторDataGridViewTextBoxColumn1.Name = "авторDataGridViewTextBoxColumn1";
+            this.авторDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.авторDataGridViewTextBoxColumn1.Width = 116;
+            // 
+            // количествоDataGridViewTextBoxColumn1
+            // 
+            this.количествоDataGridViewTextBoxColumn1.DataPropertyName = "Количество";
+            this.количествоDataGridViewTextBoxColumn1.HeaderText = "Количество";
+            this.количествоDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.количествоDataGridViewTextBoxColumn1.Name = "количествоDataGridViewTextBoxColumn1";
+            this.количествоDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.количествоDataGridViewTextBoxColumn1.Width = 174;
+            // 
+            // showOrderByIdBindingSource
+            // 
+            this.showOrderByIdBindingSource.DataMember = "showOrderById";
+            this.showOrderByIdBindingSource.DataSource = this.salonDataSet;
+            // 
+            // orderNumberBox
+            // 
+            this.orderNumberBox.DataSource = this.showAllOrdersBindingSource;
+            this.orderNumberBox.DisplayMember = "Номер заказа";
+            this.orderNumberBox.FormattingEnabled = true;
+            this.orderNumberBox.Location = new System.Drawing.Point(171, 427);
+            this.orderNumberBox.Name = "orderNumberBox";
+            this.orderNumberBox.Size = new System.Drawing.Size(361, 33);
+            this.orderNumberBox.TabIndex = 6;
+            this.orderNumberBox.ValueMember = "Номер заказа";
+            this.orderNumberBox.SelectedIndexChanged += new System.EventHandler(this.orderNumberBox_SelectedIndexChanged);
+            // 
+            // showAllOrdersBindingSource
+            // 
+            this.showAllOrdersBindingSource.DataMember = "showAllOrders";
+            this.showAllOrdersBindingSource.DataSource = this.salonDataSet;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 427);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(159, 25);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Номер заказа:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(807, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(203, 25);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Конкретный заказ:";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.номерЗаказаDataGridViewTextBoxColumn,
+            this.номерКлиентаDataGridViewTextBoxColumn,
+            this.номерСотрудникаDataGridViewTextBoxColumn,
+            this.статусЗаказаDataGridViewTextBoxColumn,
+            this.суммаЗаказаDataGridViewTextBoxColumn,
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.showAllOrdersBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(8, 31);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 82;
+            this.dataGridView2.RowTemplate.Height = 33;
+            this.dataGridView2.Size = new System.Drawing.Size(796, 381);
+            this.dataGridView2.TabIndex = 3;
+            // 
+            // номерЗаказаDataGridViewTextBoxColumn
+            // 
+            this.номерЗаказаDataGridViewTextBoxColumn.DataPropertyName = "Номер заказа";
+            this.номерЗаказаDataGridViewTextBoxColumn.HeaderText = "Номер заказа";
+            this.номерЗаказаDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.номерЗаказаDataGridViewTextBoxColumn.Name = "номерЗаказаDataGridViewTextBoxColumn";
+            this.номерЗаказаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.номерЗаказаDataGridViewTextBoxColumn.Width = 182;
+            // 
+            // номерКлиентаDataGridViewTextBoxColumn
+            // 
+            this.номерКлиентаDataGridViewTextBoxColumn.DataPropertyName = "Номер клиента";
+            this.номерКлиентаDataGridViewTextBoxColumn.HeaderText = "Номер клиента";
+            this.номерКлиентаDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.номерКлиентаDataGridViewTextBoxColumn.Name = "номерКлиентаDataGridViewTextBoxColumn";
+            this.номерКлиентаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.номерКлиентаDataGridViewTextBoxColumn.Width = 193;
+            // 
+            // номерСотрудникаDataGridViewTextBoxColumn
+            // 
+            this.номерСотрудникаDataGridViewTextBoxColumn.DataPropertyName = "Номер сотрудника";
+            this.номерСотрудникаDataGridViewTextBoxColumn.HeaderText = "Номер сотрудника";
+            this.номерСотрудникаDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.номерСотрудникаDataGridViewTextBoxColumn.Name = "номерСотрудникаDataGridViewTextBoxColumn";
+            this.номерСотрудникаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.номерСотрудникаDataGridViewTextBoxColumn.Width = 224;
+            // 
+            // статусЗаказаDataGridViewTextBoxColumn
+            // 
+            this.статусЗаказаDataGridViewTextBoxColumn.DataPropertyName = "Статус заказа";
+            this.статусЗаказаDataGridViewTextBoxColumn.HeaderText = "Статус заказа";
+            this.статусЗаказаDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.статусЗаказаDataGridViewTextBoxColumn.Name = "статусЗаказаDataGridViewTextBoxColumn";
+            this.статусЗаказаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.статусЗаказаDataGridViewTextBoxColumn.Width = 185;
+            // 
+            // суммаЗаказаDataGridViewTextBoxColumn
+            // 
+            this.суммаЗаказаDataGridViewTextBoxColumn.DataPropertyName = "Сумма заказа";
+            this.суммаЗаказаDataGridViewTextBoxColumn.HeaderText = "Сумма заказа";
+            this.суммаЗаказаDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.суммаЗаказаDataGridViewTextBoxColumn.Name = "суммаЗаказаDataGridViewTextBoxColumn";
+            this.суммаЗаказаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.суммаЗаказаDataGridViewTextBoxColumn.Width = 184;
+            // 
+            // датаИВремяЗаказаDataGridViewTextBoxColumn
+            // 
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn.DataPropertyName = "Дата и время заказа";
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn.HeaderText = "Дата и время заказа";
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn.Name = "датаИВремяЗаказаDataGridViewTextBoxColumn";
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.датаИВремяЗаказаDataGridViewTextBoxColumn.Width = 244;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 3);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(133, 25);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Все заказы:";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.removeReviewButton);
+            this.tabPage3.Controls.Add(this.reviewNumberBox);
+            this.tabPage3.Controls.Add(this.label13);
+            this.tabPage3.Controls.Add(this.dataGridView5);
+            this.tabPage3.Controls.Add(this.label12);
+            this.tabPage3.Location = new System.Drawing.Point(8, 39);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1678, 945);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Отзывы";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // reviewNumberBox
+            // 
+            this.reviewNumberBox.DataSource = this.showAllReviewsBindingSource;
+            this.reviewNumberBox.DisplayMember = "Текст рекомендации";
+            this.reviewNumberBox.FormattingEnabled = true;
+            this.reviewNumberBox.Location = new System.Drawing.Point(93, 455);
+            this.reviewNumberBox.Name = "reviewNumberBox";
+            this.reviewNumberBox.Size = new System.Drawing.Size(420, 33);
+            this.reviewNumberBox.TabIndex = 6;
+            this.reviewNumberBox.ValueMember = "Номер отзыва";
+            // 
+            // showAllReviewsBindingSource
+            // 
+            this.showAllReviewsBindingSource.DataMember = "showAllReviews";
+            this.showAllReviewsBindingSource.DataSource = this.salonDataSet;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 452);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(81, 25);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Отзыв:";
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.AutoGenerateColumns = false;
+            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.номерОтзываDataGridViewTextBoxColumn,
+            this.артикулDataGridViewTextBoxColumn2,
+            this.названиеЗаписиDataGridViewTextBoxColumn,
+            this.номерКлиентаDataGridViewTextBoxColumn3,
+            this.текстРекомендацииDataGridViewTextBoxColumn});
+            this.dataGridView5.DataSource = this.showAllReviewsBindingSource;
+            this.dataGridView5.Location = new System.Drawing.Point(4, 41);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.ReadOnly = true;
+            this.dataGridView5.RowHeadersWidth = 82;
+            this.dataGridView5.RowTemplate.Height = 33;
+            this.dataGridView5.Size = new System.Drawing.Size(1664, 408);
+            this.dataGridView5.TabIndex = 4;
+            // 
+            // номерОтзываDataGridViewTextBoxColumn
+            // 
+            this.номерОтзываDataGridViewTextBoxColumn.DataPropertyName = "Номер отзыва";
+            this.номерОтзываDataGridViewTextBoxColumn.HeaderText = "Номер отзыва";
+            this.номерОтзываDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.номерОтзываDataGridViewTextBoxColumn.Name = "номерОтзываDataGridViewTextBoxColumn";
+            this.номерОтзываDataGridViewTextBoxColumn.ReadOnly = true;
+            this.номерОтзываDataGridViewTextBoxColumn.Width = 184;
+            // 
+            // артикулDataGridViewTextBoxColumn2
+            // 
+            this.артикулDataGridViewTextBoxColumn2.DataPropertyName = "Артикул";
+            this.артикулDataGridViewTextBoxColumn2.HeaderText = "Артикул";
+            this.артикулDataGridViewTextBoxColumn2.MinimumWidth = 10;
+            this.артикулDataGridViewTextBoxColumn2.Name = "артикулDataGridViewTextBoxColumn2";
+            this.артикулDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.артикулDataGridViewTextBoxColumn2.Width = 139;
+            // 
+            // названиеЗаписиDataGridViewTextBoxColumn
+            // 
+            this.названиеЗаписиDataGridViewTextBoxColumn.DataPropertyName = "Название записи";
+            this.названиеЗаписиDataGridViewTextBoxColumn.HeaderText = "Название записи";
+            this.названиеЗаписиDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.названиеЗаписиDataGridViewTextBoxColumn.Name = "названиеЗаписиDataGridViewTextBoxColumn";
+            this.названиеЗаписиDataGridViewTextBoxColumn.ReadOnly = true;
+            this.названиеЗаписиDataGridViewTextBoxColumn.Width = 211;
+            // 
+            // номерКлиентаDataGridViewTextBoxColumn3
+            // 
+            this.номерКлиентаDataGridViewTextBoxColumn3.DataPropertyName = "Номер клиента";
+            this.номерКлиентаDataGridViewTextBoxColumn3.HeaderText = "Номер клиента";
+            this.номерКлиентаDataGridViewTextBoxColumn3.MinimumWidth = 10;
+            this.номерКлиентаDataGridViewTextBoxColumn3.Name = "номерКлиентаDataGridViewTextBoxColumn3";
+            this.номерКлиентаDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.номерКлиентаDataGridViewTextBoxColumn3.Width = 193;
+            // 
+            // текстРекомендацииDataGridViewTextBoxColumn
+            // 
+            this.текстРекомендацииDataGridViewTextBoxColumn.DataPropertyName = "Текст рекомендации";
+            this.текстРекомендацииDataGridViewTextBoxColumn.HeaderText = "Текст отзыва";
+            this.текстРекомендацииDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.текстРекомендацииDataGridViewTextBoxColumn.Name = "текстРекомендацииDataGridViewTextBoxColumn";
+            this.текстРекомендацииDataGridViewTextBoxColumn.ReadOnly = true;
+            this.текстРекомендацииDataGridViewTextBoxColumn.Width = 176;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 3);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(135, 25);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Все отзывы:";
+            // 
+            // showAllRecordsTableAdapter
+            // 
+            this.showAllRecordsTableAdapter.ClearBeforeFill = true;
             // 
             // clientsTableAdapter1
             // 
             this.clientsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // showAllOrdersTableAdapter
+            // 
+            this.showAllOrdersTableAdapter.ClearBeforeFill = true;
+            // 
+            // showOrderByIdTableAdapter
+            // 
+            this.showOrderByIdTableAdapter.ClearBeforeFill = true;
+            // 
+            // showOrdersByClientEmailTableAdapter
+            // 
+            this.showOrdersByClientEmailTableAdapter.ClearBeforeFill = true;
+            // 
+            // showAllClientsTableAdapter
+            // 
+            this.showAllClientsTableAdapter.ClearBeforeFill = true;
+            // 
+            // showAllReviewsTableAdapter
+            // 
+            this.showAllReviewsTableAdapter.ClearBeforeFill = true;
+            // 
+            // removeReviewButton
+            // 
+            this.removeReviewButton.Location = new System.Drawing.Point(522, 452);
+            this.removeReviewButton.Name = "removeReviewButton";
+            this.removeReviewButton.Size = new System.Drawing.Size(279, 49);
+            this.removeReviewButton.TabIndex = 7;
+            this.removeReviewButton.Text = "Удалить отзыв";
+            this.removeReviewButton.UseVisualStyleBackColor = true;
+            this.removeReviewButton.Click += new System.EventHandler(this.removeReviewButton_Click);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.dataGridView7);
+            this.tabPage4.Controls.Add(this.recommendationNumberBox);
+            this.tabPage4.Controls.Add(this.label16);
+            this.tabPage4.Controls.Add(this.label15);
+            this.tabPage4.Controls.Add(this.label14);
+            this.tabPage4.Controls.Add(this.dataGridView6);
+            this.tabPage4.Location = new System.Drawing.Point(8, 39);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1678, 945);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Рекомендации";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.AllowUserToAddRows = false;
+            this.dataGridView6.AllowUserToDeleteRows = false;
+            this.dataGridView6.AutoGenerateColumns = false;
+            this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.номерРекомендацииDataGridViewTextBoxColumn,
+            this.номерСотрудникаDataGridViewTextBoxColumn2,
+            this.номерКлиентаDataGridViewTextBoxColumn4,
+            this.текстРекомендацииDataGridViewTextBoxColumn1,
+            this.датаИВремяРекомендацииDataGridViewTextBoxColumn});
+            this.dataGridView6.DataSource = this.showAllRecommendationsBindingSource;
+            this.dataGridView6.Location = new System.Drawing.Point(8, 43);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.ReadOnly = true;
+            this.dataGridView6.RowHeadersWidth = 82;
+            this.dataGridView6.RowTemplate.Height = 33;
+            this.dataGridView6.Size = new System.Drawing.Size(818, 367);
+            this.dataGridView6.TabIndex = 0;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 3);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(207, 25);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Все рекомендации:";
+            // 
+            // showAllRecommendationsBindingSource
+            // 
+            this.showAllRecommendationsBindingSource.DataMember = "showAllRecommendations";
+            this.showAllRecommendationsBindingSource.DataSource = this.salonDataSet;
+            // 
+            // showAllRecommendationsTableAdapter
+            // 
+            this.showAllRecommendationsTableAdapter.ClearBeforeFill = true;
+            // 
+            // номерРекомендацииDataGridViewTextBoxColumn
+            // 
+            this.номерРекомендацииDataGridViewTextBoxColumn.DataPropertyName = "Номер рекомендации";
+            this.номерРекомендацииDataGridViewTextBoxColumn.HeaderText = "Номер рекомендации";
+            this.номерРекомендацииDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.номерРекомендацииDataGridViewTextBoxColumn.Name = "номерРекомендацииDataGridViewTextBoxColumn";
+            this.номерРекомендацииDataGridViewTextBoxColumn.ReadOnly = true;
+            this.номерРекомендацииDataGridViewTextBoxColumn.Width = 252;
+            // 
+            // номерСотрудникаDataGridViewTextBoxColumn2
+            // 
+            this.номерСотрудникаDataGridViewTextBoxColumn2.DataPropertyName = "Номер сотрудника";
+            this.номерСотрудникаDataGridViewTextBoxColumn2.HeaderText = "Номер сотрудника";
+            this.номерСотрудникаDataGridViewTextBoxColumn2.MinimumWidth = 10;
+            this.номерСотрудникаDataGridViewTextBoxColumn2.Name = "номерСотрудникаDataGridViewTextBoxColumn2";
+            this.номерСотрудникаDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.номерСотрудникаDataGridViewTextBoxColumn2.Width = 224;
+            // 
+            // номерКлиентаDataGridViewTextBoxColumn4
+            // 
+            this.номерКлиентаDataGridViewTextBoxColumn4.DataPropertyName = "Номер клиента";
+            this.номерКлиентаDataGridViewTextBoxColumn4.HeaderText = "Номер клиента";
+            this.номерКлиентаDataGridViewTextBoxColumn4.MinimumWidth = 10;
+            this.номерКлиентаDataGridViewTextBoxColumn4.Name = "номерКлиентаDataGridViewTextBoxColumn4";
+            this.номерКлиентаDataGridViewTextBoxColumn4.ReadOnly = true;
+            this.номерКлиентаDataGridViewTextBoxColumn4.Width = 193;
+            // 
+            // текстРекомендацииDataGridViewTextBoxColumn1
+            // 
+            this.текстРекомендацииDataGridViewTextBoxColumn1.DataPropertyName = "Текст рекомендации";
+            this.текстРекомендацииDataGridViewTextBoxColumn1.HeaderText = "Текст рекомендации";
+            this.текстРекомендацииDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.текстРекомендацииDataGridViewTextBoxColumn1.Name = "текстРекомендацииDataGridViewTextBoxColumn1";
+            this.текстРекомендацииDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.текстРекомендацииDataGridViewTextBoxColumn1.Width = 243;
+            // 
+            // датаИВремяРекомендацииDataGridViewTextBoxColumn
+            // 
+            this.датаИВремяРекомендацииDataGridViewTextBoxColumn.DataPropertyName = "Дата и время рекомендации";
+            this.датаИВремяРекомендацииDataGridViewTextBoxColumn.HeaderText = "Дата и время рекомендации";
+            this.датаИВремяРекомендацииDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.датаИВремяРекомендацииDataGridViewTextBoxColumn.Name = "датаИВремяРекомендацииDataGridViewTextBoxColumn";
+            this.датаИВремяРекомендацииDataGridViewTextBoxColumn.ReadOnly = true;
+            this.датаИВремяРекомендацииDataGridViewTextBoxColumn.Width = 314;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(832, 3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(287, 25);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Конкретная рекомендация:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 424);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(273, 25);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Выберете рекомендацию:";
+            // 
+            // recommendationNumberBox
+            // 
+            this.recommendationNumberBox.DataSource = this.showAllRecommendationsBindingSource;
+            this.recommendationNumberBox.DisplayMember = "Текст рекомендации";
+            this.recommendationNumberBox.FormattingEnabled = true;
+            this.recommendationNumberBox.Location = new System.Drawing.Point(276, 421);
+            this.recommendationNumberBox.Name = "recommendationNumberBox";
+            this.recommendationNumberBox.Size = new System.Drawing.Size(550, 33);
+            this.recommendationNumberBox.TabIndex = 7;
+            this.recommendationNumberBox.ValueMember = "Номер рекомендации";
+            this.recommendationNumberBox.SelectedIndexChanged += new System.EventHandler(this.recommendationNumberBox_SelectedIndexChanged);
+            // 
+            // dataGridView7
+            // 
+            this.dataGridView7.AllowUserToAddRows = false;
+            this.dataGridView7.AllowUserToDeleteRows = false;
+            this.dataGridView7.AutoGenerateColumns = false;
+            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.артикулDataGridViewTextBoxColumn3,
+            this.названиеDataGridViewTextBoxColumn2,
+            this.авторDataGridViewTextBoxColumn2});
+            this.dataGridView7.DataSource = this.showRecommendationByIdBindingSource;
+            this.dataGridView7.Location = new System.Drawing.Point(839, 42);
+            this.dataGridView7.Name = "dataGridView7";
+            this.dataGridView7.ReadOnly = true;
+            this.dataGridView7.RowHeadersWidth = 82;
+            this.dataGridView7.RowTemplate.Height = 33;
+            this.dataGridView7.Size = new System.Drawing.Size(823, 367);
+            this.dataGridView7.TabIndex = 8;
+            // 
+            // showRecommendationByIdBindingSource
+            // 
+            this.showRecommendationByIdBindingSource.DataMember = "showRecommendationById";
+            this.showRecommendationByIdBindingSource.DataSource = this.salonDataSet;
+            // 
+            // showRecommendationByIdTableAdapter
+            // 
+            this.showRecommendationByIdTableAdapter.ClearBeforeFill = true;
+            // 
+            // артикулDataGridViewTextBoxColumn3
+            // 
+            this.артикулDataGridViewTextBoxColumn3.DataPropertyName = "Артикул";
+            this.артикулDataGridViewTextBoxColumn3.HeaderText = "Артикул";
+            this.артикулDataGridViewTextBoxColumn3.MinimumWidth = 10;
+            this.артикулDataGridViewTextBoxColumn3.Name = "артикулDataGridViewTextBoxColumn3";
+            this.артикулDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.артикулDataGridViewTextBoxColumn3.Width = 200;
+            // 
+            // названиеDataGridViewTextBoxColumn2
+            // 
+            this.названиеDataGridViewTextBoxColumn2.DataPropertyName = "Название";
+            this.названиеDataGridViewTextBoxColumn2.HeaderText = "Название";
+            this.названиеDataGridViewTextBoxColumn2.MinimumWidth = 10;
+            this.названиеDataGridViewTextBoxColumn2.Name = "названиеDataGridViewTextBoxColumn2";
+            this.названиеDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.названиеDataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // авторDataGridViewTextBoxColumn2
+            // 
+            this.авторDataGridViewTextBoxColumn2.DataPropertyName = "Автор";
+            this.авторDataGridViewTextBoxColumn2.HeaderText = "Автор";
+            this.авторDataGridViewTextBoxColumn2.MinimumWidth = 10;
+            this.авторDataGridViewTextBoxColumn2.Name = "авторDataGridViewTextBoxColumn2";
+            this.авторDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.авторDataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.dataGridView8);
+            this.tabPage5.Controls.Add(this.label17);
+            this.tabPage5.Location = new System.Drawing.Point(8, 39);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1678, 945);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Статусы";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 3);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(141, 25);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Все статусы:";
+            // 
+            // dataGridView8
+            // 
+            this.dataGridView8.AllowUserToAddRows = false;
+            this.dataGridView8.AllowUserToDeleteRows = false;
+            this.dataGridView8.AutoGenerateColumns = false;
+            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.текстСтатусаDataGridViewTextBoxColumn});
+            this.dataGridView8.DataSource = this.showAllStatusesBindingSource;
+            this.dataGridView8.Location = new System.Drawing.Point(11, 48);
+            this.dataGridView8.Name = "dataGridView8";
+            this.dataGridView8.ReadOnly = true;
+            this.dataGridView8.RowHeadersWidth = 82;
+            this.dataGridView8.RowTemplate.Height = 33;
+            this.dataGridView8.Size = new System.Drawing.Size(1661, 541);
+            this.dataGridView8.TabIndex = 6;
+            // 
+            // showAllStatusesBindingSource
+            // 
+            this.showAllStatusesBindingSource.DataMember = "showAllStatuses";
+            this.showAllStatusesBindingSource.DataSource = this.salonDataSet;
+            // 
+            // showAllStatusesTableAdapter
+            // 
+            this.showAllStatusesTableAdapter.ClearBeforeFill = true;
+            // 
+            // текстСтатусаDataGridViewTextBoxColumn
+            // 
+            this.текстСтатусаDataGridViewTextBoxColumn.DataPropertyName = "Текст статуса";
+            this.текстСтатусаDataGridViewTextBoxColumn.HeaderText = "Текст статуса";
+            this.текстСтатусаDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.текстСтатусаDataGridViewTextBoxColumn.Name = "текстСтатусаDataGridViewTextBoxColumn";
+            this.текстСтатусаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.текстСтатусаDataGridViewTextBoxColumn.Width = 200;
             // 
             // EmployeeForm
             // 
@@ -335,10 +1214,34 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salonDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showAllRecordsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_count)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllRecordsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salonDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllClientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showOrdersByClientEmailBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderById)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showOrderByIdBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllOrdersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllReviewsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllRecommendationsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showRecommendationByIdBindingSource)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllStatusesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -372,5 +1275,86 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private SalonDataSetTableAdapters.clientsTableAdapter clientsTableAdapter1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.BindingSource showAllOrdersBindingSource;
+        private SalonDataSetTableAdapters.showAllOrdersTableAdapter showAllOrdersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерЗаказаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерКлиентаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерСотрудникаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn статусЗаказаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn суммаЗаказаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn датаИВремяЗаказаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox orderNumberBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView orderById;
+        private System.Windows.Forms.DataGridViewTextBoxColumn артикулDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn названиеDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn авторDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn количествоDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource showOrderByIdBindingSource;
+        private SalonDataSetTableAdapters.showOrderByIdTableAdapter showOrderByIdTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерЗаказаDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерКлиентаDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерСотрудникаDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn статусЗаказаDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn суммаЗаказаDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn датаИВремяЗаказаDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource showOrdersByClientEmailBindingSource;
+        private System.Windows.Forms.Button showOrdersByEmailButton;
+        private System.Windows.Forms.TextBox emailBox;
+        private System.Windows.Forms.Label label10;
+        private SalonDataSetTableAdapters.showOrdersByClientEmailTableAdapter showOrdersByClientEmailTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.BindingSource showAllClientsBindingSource;
+        private SalonDataSetTableAdapters.showAllClientsTableAdapter showAllClientsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерКлиентаDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn имяDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn фамилияDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn электроннаяПочтаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn адресDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn датаРожденияDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерТелефонаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.BindingSource showAllReviewsBindingSource;
+        private SalonDataSetTableAdapters.showAllReviewsTableAdapter showAllReviewsTableAdapter;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox reviewNumberBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерОтзываDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn артикулDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn названиеЗаписиDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерКлиентаDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn текстРекомендацииDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button removeReviewButton;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.BindingSource showAllRecommendationsBindingSource;
+        private SalonDataSetTableAdapters.showAllRecommendationsTableAdapter showAllRecommendationsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерРекомендацииDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерСотрудникаDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерКлиентаDataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn текстРекомендацииDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn датаИВремяРекомендацииDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn артикулDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn названиеDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn авторDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.BindingSource showRecommendationByIdBindingSource;
+        private System.Windows.Forms.ComboBox recommendationNumberBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private SalonDataSetTableAdapters.showRecommendationByIdTableAdapter showRecommendationByIdTableAdapter;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.DataGridView dataGridView8;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.BindingSource showAllStatusesBindingSource;
+        private SalonDataSetTableAdapters.showAllStatusesTableAdapter showAllStatusesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn текстСтатусаDataGridViewTextBoxColumn;
     }
 }

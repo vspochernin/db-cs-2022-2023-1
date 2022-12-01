@@ -21,16 +21,35 @@ namespace Salon
 
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSet.showAllStatuses". При необходимости она может быть перемещена или удалена.
+            this.showAllStatusesTableAdapter.Fill(this.salonDataSet.showAllStatuses);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSet.showAllRecommendations". При необходимости она может быть перемещена или удалена.
+            this.showAllRecommendationsTableAdapter.Fill(this.salonDataSet.showAllRecommendations);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSet.showAllReviews". При необходимости она может быть перемещена или удалена.
+            this.showAllReviewsTableAdapter.Fill(this.salonDataSet.showAllReviews);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSet.showAllClients". При необходимости она может быть перемещена или удалена.
+            this.showAllClientsTableAdapter.Fill(this.salonDataSet.showAllClients);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSet.showAllOrders". При необходимости она может быть перемещена или удалена.
+            this.showAllOrdersTableAdapter.Fill(this.salonDataSet.showAllOrders);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSet.showAllRecords". При необходимости она может быть перемещена или удалена.
             this.showAllRecordsTableAdapter.Fill(this.salonDataSet.showAllRecords);
-
+            if (orderNumberBox.SelectedValue != null)
+            {
+                this.showOrderByIdTableAdapter.Fill(this.salonDataSet.showOrderById, (int)orderNumberBox.SelectedValue);
+            }
+            if (recommendationNumberBox.SelectedValue != null)
+            {
+                int recommendationId = (int)recommendationNumberBox.SelectedValue;
+                showRecommendationByIdTableAdapter.Fill(this.salonDataSet.showRecommendationById, recommendationId);
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dataBase.openConnection();
+
             if (recordIdBox.SelectedValue != null)
             {
-                dataBase.openConnection();
                 SqlDataAdapter adapter = new SqlDataAdapter();
 
                 string recordQuery = $"select * from records where record_id = {(int)recordIdBox.SelectedValue}";
@@ -48,12 +67,15 @@ namespace Salon
                     numericUpDown_count.Value = decimal.Parse(recordTable.Rows[0][4].ToString());
                 }
 
-                dataBase.closeConnection();
             }
+
+            dataBase.closeConnection();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dataBase.openConnection();
+
             int recordId = 0;
             if (recordIdBox.SelectedValue != null)
             {
@@ -68,6 +90,8 @@ namespace Salon
                     this.showAllRecordsTableAdapter.Fill(this.salonDataSet.showAllRecords);
                 }
             }
+
+            dataBase.closeConnection();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -93,9 +117,10 @@ namespace Salon
 
         private void updateRecordButton_Click(object sender, EventArgs e)
         {
+            dataBase.openConnection();
+
             if (recordIdBox.SelectedValue != null)
             {
-                dataBase.openConnection();
 
                 int recordId = (int)recordIdBox.SelectedValue;
                 string title = textBox_title.Text;
@@ -112,7 +137,55 @@ namespace Salon
                     this.showAllRecordsTableAdapter.Fill(this.salonDataSet.showAllRecords);
                 }
 
-                dataBase.closeConnection();
+            }
+
+            dataBase.closeConnection();
+        }
+
+        private void orderNumberBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (orderNumberBox.SelectedValue != null)
+            {
+                this.showOrderByIdTableAdapter.Fill(this.salonDataSet.showOrderById, (int)orderNumberBox.SelectedValue);
+            }
+        }
+
+        private void showOrdersByEmailButton_Click(object sender, EventArgs e)
+        {
+            if (emailBox.Text != null)
+            {
+                string email = emailBox.Text;
+
+                this.showOrdersByClientEmailTableAdapter.Fill(this.salonDataSet.showOrdersByClientEmail, email);
+            }
+        }
+
+        private void removeReviewButton_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+
+            if (reviewNumberBox.SelectedValue != null)
+            {
+                int reviewId = (int)reviewNumberBox.SelectedValue;
+                string removeReviewQuery = $"exec removeReview {reviewId}";
+                SqlCommand removeReviewCommand = new SqlCommand(removeReviewQuery, dataBase.getConnection());
+
+                if (removeReviewCommand.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Отзыв успешно удален!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.showAllReviewsTableAdapter.Fill(this.salonDataSet.showAllReviews);
+                }
+            }
+
+            dataBase.closeConnection();
+        }
+
+        private void recommendationNumberBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (recommendationNumberBox.SelectedValue != null)
+            {
+                int recommendationId = (int)recommendationNumberBox.SelectedValue;
+                showRecommendationByIdTableAdapter.Fill(this.salonDataSet.showRecommendationById, recommendationId);
             }
         }
     }
