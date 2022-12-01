@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -201,6 +202,120 @@ namespace Salon
                 int recommendationId = (int)recommendationNumberBox.SelectedValue;
                 showRecommendationByIdTableAdapter.Fill(this.salonDataSet.showRecommendationById, recommendationId);
             }
+        }
+
+        private void removeRecordFromRecommendationButton_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+
+            if (recommendationNumberBox.SelectedValue != null && recordInRecommendationNumberBox.SelectedValue != null)
+            {
+                int recommendationId = (int)recommendationNumberBox.SelectedValue;
+                int recordId = (int)recordInRecommendationNumberBox.SelectedValue;
+
+                string removeRecordFromRecommendationQuery = $"exec removeRecordFromRecommendation {recommendationId}, {recordId}";
+                SqlCommand removeRecordFromRecommendationCommand = new SqlCommand(removeRecordFromRecommendationQuery, dataBase.getConnection());
+
+
+                if (removeRecordFromRecommendationCommand.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Музыкальная запись успешно удалена из заказа!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.showRecommendationByIdTableAdapter.Fill(this.salonDataSet.showRecommendationById, recommendationId);
+                }
+            }
+
+            dataBase.closeConnection();
+        }
+
+        private void removeRecommendationButton_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+
+            if (recommendationNumberBox.SelectedValue != null)
+            {
+                int recommendationId = (int)recommendationNumberBox.SelectedValue;
+
+                string removeRecommendationQuery = $"exec removeRecommendation {recommendationId}";
+                SqlCommand removeRecommendationCommand = new SqlCommand(removeRecommendationQuery, dataBase.getConnection());
+
+                if (removeRecommendationCommand.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Рекомендация успешно удалена!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.showAllRecommendationsTableAdapter.Fill(this.salonDataSet.showAllRecommendations);
+                    this.showRecommendationByIdTableAdapter.Fill(this.salonDataSet.showRecommendationById, recommendationId);
+                }
+            }
+
+
+            dataBase.closeConnection();
+        }
+
+        private void addRecommendationButton_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+
+            if (clientNumberBox.SelectedValue != null)
+            {
+                int clientId = (int)clientNumberBox.SelectedValue;
+                int employeeId = Globals.curUserId;
+                string text = recommendationTextBox.Text;
+
+                string addRecommendationQuery = $"exec addRecommendation {employeeId}, {clientId}, '{text}'";
+                SqlCommand addRecommendationCommand = new SqlCommand(addRecommendationQuery, dataBase.getConnection());
+
+                if (addRecommendationCommand.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Рекомендация успешно добавлена!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.showAllRecommendationsTableAdapter.Fill(this.salonDataSet.showAllRecommendations);
+                }
+            }
+
+            dataBase.closeConnection();
+        }
+
+        private void updateTextButton_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+
+            if (recommendationNumberBox.SelectedValue != null)
+            {
+                int recommendationId = (int)recommendationNumberBox.SelectedValue;
+                string text = recommendationTextBox.Text;
+
+                string updateRecommendationTextQuery = $"updateRecommendationText {recommendationId}, '{text}'";
+                SqlCommand updateRecommendationTextCommand = new SqlCommand(updateRecommendationTextQuery, dataBase.getConnection());
+
+                if (updateRecommendationTextCommand.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Текст рекомендации успешно изменен!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.showAllRecommendationsTableAdapter.Fill(this.salonDataSet.showAllRecommendations);
+                }
+            }
+
+            dataBase.closeConnection();
+        }
+
+        private void addRecordToRecommendationButton_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+
+            if (recommendationNumberBox.SelectedValue != null && recordToRecommendationNumberBox.SelectedValue != null)
+            {
+                int recommendationId = (int)recommendationNumberBox.SelectedValue;
+                int recordId = (int)recordToRecommendationNumberBox.SelectedValue;
+
+                string addRecordToRecommendationQuery = $"exec addRecordToRecommendation {recommendationId}, {recordId}";
+                SqlCommand addRecordToRecommendationCommand = new SqlCommand(addRecordToRecommendationQuery, dataBase.getConnection());
+
+                if (addRecordToRecommendationCommand.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Запись успешно добавлена в рекомендацию!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.showAllRecommendationsTableAdapter.Fill(this.salonDataSet.showAllRecommendations);
+                    this.showRecommendationByIdTableAdapter.Fill(this.salonDataSet.showRecommendationById, recommendationId);
+                }
+            }
+
+            dataBase.closeConnection();
         }
     }
 }
