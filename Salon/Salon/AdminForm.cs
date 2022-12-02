@@ -46,6 +46,7 @@ namespace Salon
                 showRecommendationByIdTableAdapter.Fill(this.salonDataSet.showRecommendationById, recommendationId);
             }
             employeePassword.PasswordChar = '*';
+            adminPassword.PasswordChar = '*';
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
