@@ -317,5 +317,61 @@ namespace Salon
 
             dataBase.closeConnection();
         }
+
+        private void applyOrderButton_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+
+            if (orderNumberBox.SelectedValue != null)
+            {
+                int orderId = (int)orderNumberBox.SelectedValue;
+
+                string updateStatusByEmployeeQuery = $"exec updateStatusByEmployee {orderId}, 2, {Globals.curUserId}";
+                SqlCommand updateStatusByEmployeeCommand = new SqlCommand(updateStatusByEmployeeQuery, dataBase.getConnection());
+
+
+                try
+                {
+                    if (updateStatusByEmployeeCommand.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Закз успешно обработан!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.showAllOrdersTableAdapter.Fill(this.salonDataSet.showAllOrders);
+                    }
+                } catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            dataBase.openConnection();
+        }
+
+        private void cancelOrderButton_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+
+            if (orderNumberBox.SelectedValue != null)
+            {
+                int orderId = (int)orderNumberBox.SelectedValue;
+
+                string updateStatusByEmployeeQuery = $"exec updateStatusByEmployee {orderId}, 4, {Globals.curUserId}";
+                SqlCommand updateStatusByEmployeeCommand = new SqlCommand(updateStatusByEmployeeQuery, dataBase.getConnection());
+
+
+                try
+                {
+                    if (updateStatusByEmployeeCommand.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Закз успешно отменен!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.showAllOrdersTableAdapter.Fill(this.salonDataSet.showAllOrders);
+                    }
+                } catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            dataBase.openConnection();
+        }
     }
 }

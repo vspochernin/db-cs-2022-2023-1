@@ -54,6 +54,8 @@
             this.количествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cancelOrderButton = new System.Windows.Forms.Button();
+            this.applyOrderButton = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.номерКлиентаDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,6 +108,7 @@
             this.текстРекомендацииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.updateTextButton = new System.Windows.Forms.Button();
             this.recommendationTextBox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.addRecommendationButton = new System.Windows.Forms.Button();
@@ -163,7 +166,6 @@
             this.showAllRecommendationsTableAdapter = new Salon.SalonDataSetTableAdapters.showAllRecommendationsTableAdapter();
             this.showRecommendationByIdTableAdapter = new Salon.SalonDataSetTableAdapters.showRecommendationByIdTableAdapter();
             this.showAllStatusesTableAdapter = new Salon.SalonDataSetTableAdapters.showAllStatusesTableAdapter();
-            this.updateTextButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_count)).BeginInit();
@@ -440,6 +442,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cancelOrderButton);
+            this.tabPage2.Controls.Add(this.applyOrderButton);
             this.tabPage2.Controls.Add(this.dataGridView4);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.dataGridView3);
@@ -459,6 +463,26 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Заказы и клиенты";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // cancelOrderButton
+            // 
+            this.cancelOrderButton.Location = new System.Drawing.Point(551, 423);
+            this.cancelOrderButton.Name = "cancelOrderButton";
+            this.cancelOrderButton.Size = new System.Drawing.Size(252, 36);
+            this.cancelOrderButton.TabIndex = 16;
+            this.cancelOrderButton.Text = "Отменить заказ";
+            this.cancelOrderButton.UseVisualStyleBackColor = true;
+            this.cancelOrderButton.Click += new System.EventHandler(this.cancelOrderButton_Click);
+            // 
+            // applyOrderButton
+            // 
+            this.applyOrderButton.Location = new System.Drawing.Point(313, 423);
+            this.applyOrderButton.Name = "applyOrderButton";
+            this.applyOrderButton.Size = new System.Drawing.Size(222, 36);
+            this.applyOrderButton.TabIndex = 15;
+            this.applyOrderButton.Text = "Принять заказ";
+            this.applyOrderButton.UseVisualStyleBackColor = true;
+            this.applyOrderButton.Click += new System.EventHandler(this.applyOrderButton_Click);
             // 
             // dataGridView4
             // 
@@ -721,7 +745,7 @@
             this.orderNumberBox.FormattingEnabled = true;
             this.orderNumberBox.Location = new System.Drawing.Point(171, 427);
             this.orderNumberBox.Name = "orderNumberBox";
-            this.orderNumberBox.Size = new System.Drawing.Size(361, 33);
+            this.orderNumberBox.Size = new System.Drawing.Size(129, 33);
             this.orderNumberBox.TabIndex = 6;
             this.orderNumberBox.ValueMember = "Номер заказа";
             this.orderNumberBox.SelectedIndexChanged += new System.EventHandler(this.orderNumberBox_SelectedIndexChanged);
@@ -991,6 +1015,16 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Рекомендации";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // updateTextButton
+            // 
+            this.updateTextButton.Location = new System.Drawing.Point(1447, 458);
+            this.updateTextButton.Name = "updateTextButton";
+            this.updateTextButton.Size = new System.Drawing.Size(207, 46);
+            this.updateTextButton.TabIndex = 24;
+            this.updateTextButton.Text = "Изменить текст";
+            this.updateTextButton.UseVisualStyleBackColor = true;
+            this.updateTextButton.Click += new System.EventHandler(this.updateTextButton_Click);
             // 
             // recommendationTextBox
             // 
@@ -1518,16 +1552,6 @@
             // 
             this.showAllStatusesTableAdapter.ClearBeforeFill = true;
             // 
-            // updateTextButton
-            // 
-            this.updateTextButton.Location = new System.Drawing.Point(1447, 458);
-            this.updateTextButton.Name = "updateTextButton";
-            this.updateTextButton.Size = new System.Drawing.Size(207, 46);
-            this.updateTextButton.TabIndex = 24;
-            this.updateTextButton.Text = "Изменить текст";
-            this.updateTextButton.UseVisualStyleBackColor = true;
-            this.updateTextButton.Click += new System.EventHandler(this.updateTextButton_Click);
-            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1711,5 +1735,7 @@
         private System.Windows.Forms.Button addRecordToRecommendationButton;
         private System.Windows.Forms.ComboBox recordToRecommendationNumberBox;
         private System.Windows.Forms.Button updateTextButton;
+        private System.Windows.Forms.Button cancelOrderButton;
+        private System.Windows.Forms.Button applyOrderButton;
     }
 }
