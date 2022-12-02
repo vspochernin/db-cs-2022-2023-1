@@ -52,9 +52,23 @@ namespace Salon
                     this.Hide();
                     loginForm.ShowDialog();
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ex.Message.Contains("IX_logins"))
+                {
+                    MessageBox.Show("Такой логин уже существует!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (ex.Message.Contains("IX_clients"))
+                {
+                    MessageBox.Show("Такой email уже существует!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } else if (ex.Message.Contains("check_phone"))
+                {
+                    MessageBox.Show("Некорректный номер телефона!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } else
+                {
+                    MessageBox.Show("Некорректно введены данные!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

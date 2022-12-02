@@ -117,7 +117,7 @@ namespace Salon
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Некорректно введены данные!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             dataBase.closeConnection();
@@ -149,7 +149,7 @@ namespace Salon
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Некорректно введены данные!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

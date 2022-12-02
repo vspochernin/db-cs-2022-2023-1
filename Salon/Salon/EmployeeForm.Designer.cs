@@ -206,7 +206,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1694, 992);
+            this.tabControl1.Size = new System.Drawing.Size(2760, 992);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -229,14 +229,14 @@
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1678, 945);
+            this.tabPage1.Size = new System.Drawing.Size(2744, 945);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Музыкальные записи";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // numericUpDown_count
             // 
-            this.numericUpDown_count.Location = new System.Drawing.Point(147, 623);
+            this.numericUpDown_count.Location = new System.Drawing.Point(682, 895);
             this.numericUpDown_count.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -248,21 +248,21 @@
             // 
             // textBox_price
             // 
-            this.textBox_price.Location = new System.Drawing.Point(147, 573);
+            this.textBox_price.Location = new System.Drawing.Point(682, 845);
             this.textBox_price.Name = "textBox_price";
             this.textBox_price.Size = new System.Drawing.Size(401, 31);
             this.textBox_price.TabIndex = 12;
             // 
             // textBox_author
             // 
-            this.textBox_author.Location = new System.Drawing.Point(147, 529);
+            this.textBox_author.Location = new System.Drawing.Point(682, 801);
             this.textBox_author.Name = "textBox_author";
             this.textBox_author.Size = new System.Drawing.Size(401, 31);
             this.textBox_author.TabIndex = 12;
             // 
             // textBox_title
             // 
-            this.textBox_title.Location = new System.Drawing.Point(147, 484);
+            this.textBox_title.Location = new System.Drawing.Point(682, 756);
             this.textBox_title.Name = "textBox_title";
             this.textBox_title.Size = new System.Drawing.Size(401, 31);
             this.textBox_title.TabIndex = 12;
@@ -270,7 +270,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 625);
+            this.label6.Location = new System.Drawing.Point(541, 897);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(135, 25);
             this.label6.TabIndex = 11;
@@ -279,7 +279,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(71, 579);
+            this.label5.Location = new System.Drawing.Point(606, 851);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 25);
             this.label5.TabIndex = 10;
@@ -288,7 +288,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(64, 529);
+            this.label4.Location = new System.Drawing.Point(599, 801);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 25);
             this.label4.TabIndex = 9;
@@ -297,7 +297,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 484);
+            this.label3.Location = new System.Drawing.Point(561, 756);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 25);
             this.label3.TabIndex = 8;
@@ -305,7 +305,7 @@
             // 
             // updateRecordButton
             // 
-            this.updateRecordButton.Location = new System.Drawing.Point(1357, 344);
+            this.updateRecordButton.Location = new System.Drawing.Point(1892, 616);
             this.updateRecordButton.Name = "updateRecordButton";
             this.updateRecordButton.Size = new System.Drawing.Size(315, 58);
             this.updateRecordButton.TabIndex = 7;
@@ -315,7 +315,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(986, 344);
+            this.button2.Location = new System.Drawing.Point(1521, 616);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(315, 58);
             this.button2.TabIndex = 6;
@@ -325,7 +325,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(611, 344);
+            this.button1.Location = new System.Drawing.Point(1146, 616);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(315, 58);
             this.button1.TabIndex = 5;
@@ -338,7 +338,7 @@
             this.recordIdBox.DataSource = this.showAllRecordsBindingSource;
             this.recordIdBox.DisplayMember = "Название";
             this.recordIdBox.FormattingEnabled = true;
-            this.recordIdBox.Location = new System.Drawing.Point(232, 358);
+            this.recordIdBox.Location = new System.Drawing.Point(767, 630);
             this.recordIdBox.Name = "recordIdBox";
             this.recordIdBox.Size = new System.Drawing.Size(347, 33);
             this.recordIdBox.TabIndex = 4;
@@ -358,7 +358,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 361);
+            this.label2.Location = new System.Drawing.Point(538, 633);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(229, 25);
             this.label2.TabIndex = 3;
@@ -383,7 +383,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1661, 307);
+            this.dataGridView1.Size = new System.Drawing.Size(2719, 543);
             this.dataGridView1.TabIndex = 2;
             // 
             // артикулDataGridViewTextBoxColumn
@@ -459,7 +459,7 @@
             this.tabPage2.Location = new System.Drawing.Point(8, 39);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1678, 945);
+            this.tabPage2.Size = new System.Drawing.Size(2744, 945);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Заказы и клиенты";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -498,11 +498,11 @@
             this.датаРожденияDataGridViewTextBoxColumn,
             this.номерТелефонаDataGridViewTextBoxColumn});
             this.dataGridView4.DataSource = this.showAllClientsBindingSource;
-            this.dataGridView4.Location = new System.Drawing.Point(812, 475);
+            this.dataGridView4.Location = new System.Drawing.Point(1451, 476);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 82;
             this.dataGridView4.RowTemplate.Height = 33;
-            this.dataGridView4.Size = new System.Drawing.Size(864, 459);
+            this.dataGridView4.Size = new System.Drawing.Size(1287, 459);
             this.dataGridView4.TabIndex = 14;
             // 
             // номерКлиентаDataGridViewTextBoxColumn2
@@ -570,7 +570,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(809, 430);
+            this.label11.Location = new System.Drawing.Point(1448, 431);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(145, 25);
             this.label11.TabIndex = 13;
@@ -593,7 +593,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 82;
             this.dataGridView3.RowTemplate.Height = 33;
-            this.dataGridView3.Size = new System.Drawing.Size(793, 400);
+            this.dataGridView3.Size = new System.Drawing.Size(1435, 400);
             this.dataGridView3.TabIndex = 12;
             // 
             // номерЗаказаDataGridViewTextBoxColumn1
@@ -689,12 +689,12 @@
             this.авторDataGridViewTextBoxColumn1,
             this.количествоDataGridViewTextBoxColumn1});
             this.orderById.DataSource = this.showOrderByIdBindingSource;
-            this.orderById.Location = new System.Drawing.Point(814, 32);
+            this.orderById.Location = new System.Drawing.Point(1453, 33);
             this.orderById.Name = "orderById";
             this.orderById.ReadOnly = true;
             this.orderById.RowHeadersWidth = 82;
             this.orderById.RowTemplate.Height = 33;
-            this.orderById.Size = new System.Drawing.Size(863, 379);
+            this.orderById.Size = new System.Drawing.Size(1285, 379);
             this.orderById.TabIndex = 7;
             // 
             // артикулDataGridViewTextBoxColumn1
@@ -767,7 +767,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(807, 3);
+            this.label8.Location = new System.Drawing.Point(1446, 4);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(203, 25);
             this.label8.TabIndex = 4;
@@ -793,7 +793,7 @@
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 82;
             this.dataGridView2.RowTemplate.Height = 33;
-            this.dataGridView2.Size = new System.Drawing.Size(796, 381);
+            this.dataGridView2.Size = new System.Drawing.Size(1439, 381);
             this.dataGridView2.TabIndex = 3;
             // 
             // номерЗаказаDataGridViewTextBoxColumn
@@ -869,14 +869,14 @@
             this.tabPage3.Location = new System.Drawing.Point(8, 39);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1678, 945);
+            this.tabPage3.Size = new System.Drawing.Size(2744, 945);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Отзывы";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // removeReviewButton
             // 
-            this.removeReviewButton.Location = new System.Drawing.Point(522, 452);
+            this.removeReviewButton.Location = new System.Drawing.Point(522, 892);
             this.removeReviewButton.Name = "removeReviewButton";
             this.removeReviewButton.Size = new System.Drawing.Size(279, 49);
             this.removeReviewButton.TabIndex = 7;
@@ -889,7 +889,7 @@
             this.reviewNumberBox.DataSource = this.showAllReviewsBindingSource;
             this.reviewNumberBox.DisplayMember = "Текст рекомендации";
             this.reviewNumberBox.FormattingEnabled = true;
-            this.reviewNumberBox.Location = new System.Drawing.Point(93, 455);
+            this.reviewNumberBox.Location = new System.Drawing.Point(93, 895);
             this.reviewNumberBox.Name = "reviewNumberBox";
             this.reviewNumberBox.Size = new System.Drawing.Size(420, 33);
             this.reviewNumberBox.TabIndex = 6;
@@ -903,7 +903,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 452);
+            this.label13.Location = new System.Drawing.Point(6, 892);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(81, 25);
             this.label13.TabIndex = 5;
@@ -928,7 +928,7 @@
             this.dataGridView5.ReadOnly = true;
             this.dataGridView5.RowHeadersWidth = 82;
             this.dataGridView5.RowTemplate.Height = 33;
-            this.dataGridView5.Size = new System.Drawing.Size(1664, 408);
+            this.dataGridView5.Size = new System.Drawing.Size(2734, 845);
             this.dataGridView5.TabIndex = 4;
             // 
             // номерОтзываDataGridViewTextBoxColumn
@@ -1011,14 +1011,14 @@
             this.tabPage4.Location = new System.Drawing.Point(8, 39);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1678, 945);
+            this.tabPage4.Size = new System.Drawing.Size(2744, 945);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Рекомендации";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // updateTextButton
             // 
-            this.updateTextButton.Location = new System.Drawing.Point(1447, 458);
+            this.updateTextButton.Location = new System.Drawing.Point(2531, 463);
             this.updateTextButton.Name = "updateTextButton";
             this.updateTextButton.Size = new System.Drawing.Size(207, 46);
             this.updateTextButton.TabIndex = 24;
@@ -1028,16 +1028,16 @@
             // 
             // recommendationTextBox
             // 
-            this.recommendationTextBox.Location = new System.Drawing.Point(921, 449);
+            this.recommendationTextBox.Location = new System.Drawing.Point(1528, 453);
             this.recommendationTextBox.Multiline = true;
             this.recommendationTextBox.Name = "recommendationTextBox";
-            this.recommendationTextBox.Size = new System.Drawing.Size(520, 56);
+            this.recommendationTextBox.Size = new System.Drawing.Size(997, 56);
             this.recommendationTextBox.TabIndex = 23;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(840, 480);
+            this.label21.Location = new System.Drawing.Point(1447, 484);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(75, 25);
             this.label21.TabIndex = 22;
@@ -1045,7 +1045,7 @@
             // 
             // addRecommendationButton
             // 
-            this.addRecommendationButton.Location = new System.Drawing.Point(1361, 510);
+            this.addRecommendationButton.Location = new System.Drawing.Point(1968, 514);
             this.addRecommendationButton.Name = "addRecommendationButton";
             this.addRecommendationButton.Size = new System.Drawing.Size(305, 39);
             this.addRecommendationButton.TabIndex = 21;
@@ -1058,7 +1058,7 @@
             this.clientNumberBox.DataSource = this.showAllClientsBindingSource;
             this.clientNumberBox.DisplayMember = "Имя";
             this.clientNumberBox.FormattingEnabled = true;
-            this.clientNumberBox.Location = new System.Drawing.Point(1035, 516);
+            this.clientNumberBox.Location = new System.Drawing.Point(1642, 520);
             this.clientNumberBox.Name = "clientNumberBox";
             this.clientNumberBox.Size = new System.Drawing.Size(320, 33);
             this.clientNumberBox.TabIndex = 20;
@@ -1080,12 +1080,12 @@
             this.датаРожденияDataGridViewTextBoxColumn1,
             this.номерТелефонаDataGridViewTextBoxColumn1});
             this.dataGridView10.DataSource = this.showAllClientsBindingSource;
-            this.dataGridView10.Location = new System.Drawing.Point(845, 555);
+            this.dataGridView10.Location = new System.Drawing.Point(1452, 559);
             this.dataGridView10.Name = "dataGridView10";
             this.dataGridView10.ReadOnly = true;
             this.dataGridView10.RowHeadersWidth = 82;
             this.dataGridView10.RowTemplate.Height = 33;
-            this.dataGridView10.Size = new System.Drawing.Size(818, 383);
+            this.dataGridView10.Size = new System.Drawing.Size(1286, 383);
             this.dataGridView10.TabIndex = 19;
             // 
             // номерКлиентаDataGridViewTextBoxColumn5
@@ -1154,7 +1154,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(834, 520);
+            this.label20.Location = new System.Drawing.Point(1441, 524);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(204, 25);
             this.label20.TabIndex = 18;
@@ -1200,7 +1200,7 @@
             this.dataGridView9.ReadOnly = true;
             this.dataGridView9.RowHeadersWidth = 82;
             this.dataGridView9.RowTemplate.Height = 33;
-            this.dataGridView9.Size = new System.Drawing.Size(818, 383);
+            this.dataGridView9.Size = new System.Drawing.Size(1429, 383);
             this.dataGridView9.TabIndex = 15;
             // 
             // артикулDataGridViewTextBoxColumn4
@@ -1269,7 +1269,7 @@
             // 
             // removeRecordFromRecommendationButton
             // 
-            this.removeRecordFromRecommendationButton.Location = new System.Drawing.Point(1447, 410);
+            this.removeRecordFromRecommendationButton.Location = new System.Drawing.Point(2054, 410);
             this.removeRecordFromRecommendationButton.Name = "removeRecordFromRecommendationButton";
             this.removeRecordFromRecommendationButton.Size = new System.Drawing.Size(208, 44);
             this.removeRecordFromRecommendationButton.TabIndex = 12;
@@ -1282,7 +1282,7 @@
             this.recordInRecommendationNumberBox.DataSource = this.showRecommendationByIdBindingSource;
             this.recordInRecommendationNumberBox.DisplayMember = "Название";
             this.recordInRecommendationNumberBox.FormattingEnabled = true;
-            this.recordInRecommendationNumberBox.Location = new System.Drawing.Point(1070, 410);
+            this.recordInRecommendationNumberBox.Location = new System.Drawing.Point(1677, 414);
             this.recordInRecommendationNumberBox.Name = "recordInRecommendationNumberBox";
             this.recordInRecommendationNumberBox.Size = new System.Drawing.Size(371, 33);
             this.recordInRecommendationNumberBox.TabIndex = 10;
@@ -1296,7 +1296,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(834, 413);
+            this.label18.Location = new System.Drawing.Point(1441, 417);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(230, 25);
             this.label18.TabIndex = 9;
@@ -1314,12 +1314,12 @@
             this.названиеDataGridViewTextBoxColumn2,
             this.авторDataGridViewTextBoxColumn2});
             this.dataGridView7.DataSource = this.showRecommendationByIdBindingSource;
-            this.dataGridView7.Location = new System.Drawing.Point(839, 42);
+            this.dataGridView7.Location = new System.Drawing.Point(1446, 46);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.ReadOnly = true;
             this.dataGridView7.RowHeadersWidth = 82;
             this.dataGridView7.RowTemplate.Height = 33;
-            this.dataGridView7.Size = new System.Drawing.Size(823, 367);
+            this.dataGridView7.Size = new System.Drawing.Size(1292, 367);
             this.dataGridView7.TabIndex = 8;
             // 
             // артикулDataGridViewTextBoxColumn3
@@ -1378,7 +1378,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(832, 3);
+            this.label15.Location = new System.Drawing.Point(1439, 7);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(287, 25);
             this.label15.TabIndex = 5;
@@ -1412,7 +1412,7 @@
             this.dataGridView6.ReadOnly = true;
             this.dataGridView6.RowHeadersWidth = 82;
             this.dataGridView6.RowTemplate.Height = 33;
-            this.dataGridView6.Size = new System.Drawing.Size(818, 367);
+            this.dataGridView6.Size = new System.Drawing.Size(1432, 367);
             this.dataGridView6.TabIndex = 0;
             // 
             // номерРекомендацииDataGridViewTextBoxColumn
@@ -1467,7 +1467,7 @@
             this.tabPage5.Location = new System.Drawing.Point(8, 39);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1678, 945);
+            this.tabPage5.Size = new System.Drawing.Size(2744, 945);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Статусы";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1486,7 +1486,7 @@
             this.dataGridView8.ReadOnly = true;
             this.dataGridView8.RowHeadersWidth = 82;
             this.dataGridView8.RowTemplate.Height = 33;
-            this.dataGridView8.Size = new System.Drawing.Size(1661, 541);
+            this.dataGridView8.Size = new System.Drawing.Size(2727, 891);
             this.dataGridView8.TabIndex = 6;
             // 
             // текстСтатусаDataGridViewTextBoxColumn
@@ -1556,7 +1556,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1718, 1016);
+            this.ClientSize = new System.Drawing.Size(2776, 1016);
             this.Controls.Add(this.tabControl1);
             this.Name = "EmployeeForm";
             this.Text = "EmployeeForm";

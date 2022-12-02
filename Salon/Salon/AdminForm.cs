@@ -120,7 +120,7 @@ namespace Salon
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Некорректно введены данные!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             dataBase.closeConnection();
@@ -152,7 +152,7 @@ namespace Salon
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Некорректно введены данные!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -255,6 +255,13 @@ namespace Salon
             string addEmployeeQuery = $"exec addEmployee '{firstName}', '{lastName}', {salary}, '{login}', '{password}'";
             SqlCommand addEmployeeCommand = new SqlCommand(addEmployeeQuery, dataBase.getConnection());
 
+
+            if (employeeLogin.Text == "" || employeePassword.Text == "")
+            {
+                MessageBox.Show("Пожалуйста, введите логин и пароль!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 if (addEmployeeCommand.ExecuteNonQuery() > 0)
@@ -265,7 +272,14 @@ namespace Salon
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ex.Message.Contains("IX_logins"))
+                {
+                    MessageBox.Show("Такой логин уже существует!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Некорректно введены данные!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             dataBase.closeConnection();
@@ -287,6 +301,12 @@ namespace Salon
                 string updateEmployeeQuery = $"exec updateEmployee {employeeId}, '{firstName}', '{lastName}', {salary}, '{login}', '{password}'";
                 SqlCommand updateEmployeeCommand = new SqlCommand(updateEmployeeQuery, dataBase.getConnection());
 
+                if (employeeLogin.Text == "" || employeePassword.Text == "")
+                {
+                    MessageBox.Show("Пожалуйста, введите логин и пароль!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 try
                 {
                     if (updateEmployeeCommand.ExecuteNonQuery() > 0)
@@ -297,7 +317,14 @@ namespace Salon
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (ex.Message.Contains("IX_logins"))
+                    {
+                        MessageBox.Show("Такой логин уже существует!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Некорректно введены данные!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
 
@@ -314,6 +341,12 @@ namespace Salon
             string updateAdminQuery = $"exec updateAdmin '{login}', '{password}'";
             SqlCommand updateAdminCommand = new SqlCommand(updateAdminQuery, dataBase.getConnection());
 
+            if (adminLogin.Text == "" || adminPassword.Text == "")
+            {
+                MessageBox.Show("Пожалуйста, введите логин и пароль!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 if (updateAdminCommand.ExecuteNonQuery() > 0)
@@ -323,7 +356,14 @@ namespace Salon
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ex.Message.Contains("IX_logins"))
+                {
+                    MessageBox.Show("Такой логин уже существует!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Некорректно введены данные!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             dataBase.closeConnection();
