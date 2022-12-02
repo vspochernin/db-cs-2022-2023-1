@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Salon.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,8 @@ namespace Salon
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSet.showAllEmployees". При необходимости она может быть перемещена или удалена.
+            this.showAllEmployeesTableAdapter.Fill(this.salonDataSet.showAllEmployees);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSet.showAllStatuses". При необходимости она может быть перемещена или удалена.
             this.showAllStatusesTableAdapter.Fill(this.salonDataSet.showAllStatuses);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSet.showAllRecommendations". При необходимости она может быть перемещена или удалена.
@@ -42,6 +45,7 @@ namespace Salon
                 int recommendationId = (int)recommendationNumberBox.SelectedValue;
                 showRecommendationByIdTableAdapter.Fill(this.salonDataSet.showRecommendationById, recommendationId);
             }
+            employeePassword.PasswordChar = '*';
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -201,6 +205,128 @@ namespace Salon
                 int recommendationId = (int)recommendationNumberBox.SelectedValue;
                 showRecommendationByIdTableAdapter.Fill(this.salonDataSet.showRecommendationById, recommendationId);
             }
+        }
+
+        private void employeeNumber_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            if (employeeNumber.SelectedValue != null)
+            {
+                int employeeId = (int)employeeNumber.SelectedValue;
+
+                string employeeQuery = $"select * from employees where employee_id = {employeeId}";
+                SqlCommand employeeCommand = new SqlCommand(employeeQuery, dataBase.getConnection());
+                DataTable employeeTable = new DataTable();
+
+                adapter.SelectCommand = employeeCommand;
+                adapter.Fill(employeeTable);
+
+                employeeFirstName.Text = employeeTable.Rows[0][1].ToString();
+                employeeLastName.Text = employeeTable.Rows[0][2].ToString();
+                employeeSalary.Text = employeeTable.Rows[0][3].ToString();
+
+                int loginId = (int)employeeTable.Rows[0][4];
+
+                string loginQuery = $"select * from logins where login_id = {loginId}";
+                SqlCommand loginCommand = new SqlCommand(loginQuery, dataBase.getConnection());
+                DataTable loginTable = new DataTable();
+
+                adapter.SelectCommand = loginCommand;
+                adapter.Fill(loginTable);
+
+                employeeLogin.Text = loginTable.Rows[0][1].ToString();
+            }
+
+            dataBase.closeConnection();
+        }
+
+        private void registerEmployeeButton_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+
+            string login = employeeLogin.Text;
+            string password = Hashing.hashPassword(employeePassword.Text);
+            string firstName = employeeFirstName.Text;
+            string lastName = employeeLastName.Text;
+            string salary = employeeSalary.Text.Replace(",", ".");
+
+            string addEmployeeQuery = $"exec addEmployee '{firstName}', '{lastName}', {salary}, '{login}', '{password}'";
+            SqlCommand addEmployeeCommand = new SqlCommand(addEmployeeQuery, dataBase.getConnection());
+
+            try
+            {
+                if (addEmployeeCommand.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Сотрудник успешно добавлен!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    showAllEmployeesTableAdapter.Fill(this.salonDataSet.showAllEmployees);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            dataBase.closeConnection();
+        }
+
+        private void updateEmployeeButton_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+
+            if (employeeNumber.SelectedValue != null)
+            {
+                int employeeId = (int)employeeNumber.SelectedValue;
+                string login = employeeLogin.Text;
+                string password = Hashing.hashPassword(employeePassword.Text);
+                string firstName = employeeFirstName.Text;
+                string lastName = employeeLastName.Text;
+                string salary = employeeSalary.Text.Replace(",", ".");
+
+                string updateEmployeeQuery = $"exec updateEmployee {employeeId}, '{firstName}', '{lastName}', {salary}, '{login}', '{password}'";
+                SqlCommand updateEmployeeCommand = new SqlCommand(updateEmployeeQuery, dataBase.getConnection());
+
+                try
+                {
+                    if (updateEmployeeCommand.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Данные сотрудника успешно изменены!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        showAllEmployeesTableAdapter.Fill(this.salonDataSet.showAllEmployees);
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            dataBase.closeConnection();
+        }
+
+        private void updateAdminButton_Click(object sender, EventArgs e)
+        {
+            dataBase.openConnection();
+
+            string login = adminLogin.Text;
+            string password = Hashing.hashPassword(adminPassword.Text);
+
+            string updateAdminQuery = $"exec updateAdmin '{login}', '{password}'";
+            SqlCommand updateAdminCommand = new SqlCommand(updateAdminQuery, dataBase.getConnection());
+
+            try
+            {
+                if (updateAdminCommand.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Данные авторизации успешно изменены!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            dataBase.closeConnection();
         }
     }
 }

@@ -63,10 +63,9 @@ namespace Salon
                     MessageBox.Show("Здравствуйте, Администратор!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Globals.curUserId = 0;
                     Globals.curUserLoginId = int.Parse(loginId);
-                    /*                    AdminForm adminForm = new AdminForm();
-                                        adminForm.Show();
-                                        this.Hide();
-                    */
+                    AdminForm adminForm = new AdminForm();
+                    adminForm.Show();
+                    this.Hide();
                 }
                 else if (employeesTable.Rows.Count > 0)
                 {

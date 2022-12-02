@@ -94,6 +94,7 @@
             this.датаИВремяЗаказаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.removeReviewButton = new System.Windows.Forms.Button();
             this.reviewNumberBox = new System.Windows.Forms.ComboBox();
             this.showAllReviewsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label13 = new System.Windows.Forms.Label();
@@ -104,6 +105,49 @@
             this.номерКлиентаDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.текстРекомендацииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.артикулDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.названиеDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.авторDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.showRecommendationByIdBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.recommendationNumberBox = new System.Windows.Forms.ComboBox();
+            this.showAllRecommendationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.номерРекомендацииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерСотрудникаDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерКлиентаDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.текстРекомендацииDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаИВремяРекомендацииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.текстСтатусаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.showAllStatusesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label17 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.employeeFirstName = new System.Windows.Forms.TextBox();
+            this.employeeNumber = new System.Windows.Forms.ComboBox();
+            this.showAllEmployeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeSalary = new System.Windows.Forms.TextBox();
+            this.employeeLastName = new System.Windows.Forms.TextBox();
+            this.employeePassword = new System.Windows.Forms.TextBox();
+            this.employeeLogin = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.updateEmployeeButton = new System.Windows.Forms.Button();
+            this.registerEmployeeButton = new System.Windows.Forms.Button();
+            this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.номерСотрудникаDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.имяDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фамилияDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.зарплатаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.showAllRecordsTableAdapter = new Salon.SalonDataSetTableAdapters.showAllRecordsTableAdapter();
             this.clientsTableAdapter1 = new Salon.SalonDataSetTableAdapters.clientsTableAdapter();
             this.showAllOrdersTableAdapter = new Salon.SalonDataSetTableAdapters.showAllOrdersTableAdapter();
@@ -111,32 +155,16 @@
             this.showOrdersByClientEmailTableAdapter = new Salon.SalonDataSetTableAdapters.showOrdersByClientEmailTableAdapter();
             this.showAllClientsTableAdapter = new Salon.SalonDataSetTableAdapters.showAllClientsTableAdapter();
             this.showAllReviewsTableAdapter = new Salon.SalonDataSetTableAdapters.showAllReviewsTableAdapter();
-            this.removeReviewButton = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.label14 = new System.Windows.Forms.Label();
-            this.showAllRecommendationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.showAllRecommendationsTableAdapter = new Salon.SalonDataSetTableAdapters.showAllRecommendationsTableAdapter();
-            this.номерРекомендацииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.номерСотрудникаDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.номерКлиентаDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.текстРекомендацииDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаИВремяРекомендацииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.recommendationNumberBox = new System.Windows.Forms.ComboBox();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.showRecommendationByIdBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.showRecommendationByIdTableAdapter = new Salon.SalonDataSetTableAdapters.showRecommendationByIdTableAdapter();
-            this.артикулDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.названиеDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.авторDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label17 = new System.Windows.Forms.Label();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.showAllStatusesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.showAllStatusesTableAdapter = new Salon.SalonDataSetTableAdapters.showAllStatusesTableAdapter();
-            this.текстСтатусаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.showAllEmployeesTableAdapter = new Salon.SalonDataSetTableAdapters.showAllEmployeesTableAdapter();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.adminLogin = new System.Windows.Forms.TextBox();
+            this.adminPassword = new System.Windows.Forms.TextBox();
+            this.updateAdminButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_count)).BeginInit();
@@ -156,13 +184,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.showAllReviewsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showAllRecommendationsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showRecommendationByIdBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllRecommendationsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showAllStatusesBindingSource)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllEmployeesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
+            this.tabPage7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -172,6 +204,8 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -821,6 +855,16 @@
             this.tabPage3.Text = "Отзывы";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // removeReviewButton
+            // 
+            this.removeReviewButton.Location = new System.Drawing.Point(522, 452);
+            this.removeReviewButton.Name = "removeReviewButton";
+            this.removeReviewButton.Size = new System.Drawing.Size(279, 49);
+            this.removeReviewButton.TabIndex = 7;
+            this.removeReviewButton.Text = "Удалить отзыв";
+            this.removeReviewButton.UseVisualStyleBackColor = true;
+            this.removeReviewButton.Click += new System.EventHandler(this.removeReviewButton_Click);
+            // 
             // reviewNumberBox
             // 
             this.reviewNumberBox.DataSource = this.showAllReviewsBindingSource;
@@ -922,44 +966,6 @@
             this.label12.TabIndex = 3;
             this.label12.Text = "Все отзывы:";
             // 
-            // showAllRecordsTableAdapter
-            // 
-            this.showAllRecordsTableAdapter.ClearBeforeFill = true;
-            // 
-            // clientsTableAdapter1
-            // 
-            this.clientsTableAdapter1.ClearBeforeFill = true;
-            // 
-            // showAllOrdersTableAdapter
-            // 
-            this.showAllOrdersTableAdapter.ClearBeforeFill = true;
-            // 
-            // showOrderByIdTableAdapter
-            // 
-            this.showOrderByIdTableAdapter.ClearBeforeFill = true;
-            // 
-            // showOrdersByClientEmailTableAdapter
-            // 
-            this.showOrdersByClientEmailTableAdapter.ClearBeforeFill = true;
-            // 
-            // showAllClientsTableAdapter
-            // 
-            this.showAllClientsTableAdapter.ClearBeforeFill = true;
-            // 
-            // showAllReviewsTableAdapter
-            // 
-            this.showAllReviewsTableAdapter.ClearBeforeFill = true;
-            // 
-            // removeReviewButton
-            // 
-            this.removeReviewButton.Location = new System.Drawing.Point(522, 452);
-            this.removeReviewButton.Name = "removeReviewButton";
-            this.removeReviewButton.Size = new System.Drawing.Size(279, 49);
-            this.removeReviewButton.TabIndex = 7;
-            this.removeReviewButton.Text = "Удалить отзыв";
-            this.removeReviewButton.UseVisualStyleBackColor = true;
-            this.removeReviewButton.Click += new System.EventHandler(this.removeReviewButton_Click);
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.dataGridView7);
@@ -975,6 +981,101 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Рекомендации";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView7
+            // 
+            this.dataGridView7.AllowUserToAddRows = false;
+            this.dataGridView7.AllowUserToDeleteRows = false;
+            this.dataGridView7.AutoGenerateColumns = false;
+            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.артикулDataGridViewTextBoxColumn3,
+            this.названиеDataGridViewTextBoxColumn2,
+            this.авторDataGridViewTextBoxColumn2});
+            this.dataGridView7.DataSource = this.showRecommendationByIdBindingSource;
+            this.dataGridView7.Location = new System.Drawing.Point(839, 42);
+            this.dataGridView7.Name = "dataGridView7";
+            this.dataGridView7.ReadOnly = true;
+            this.dataGridView7.RowHeadersWidth = 82;
+            this.dataGridView7.RowTemplate.Height = 33;
+            this.dataGridView7.Size = new System.Drawing.Size(823, 367);
+            this.dataGridView7.TabIndex = 8;
+            // 
+            // артикулDataGridViewTextBoxColumn3
+            // 
+            this.артикулDataGridViewTextBoxColumn3.DataPropertyName = "Артикул";
+            this.артикулDataGridViewTextBoxColumn3.HeaderText = "Артикул";
+            this.артикулDataGridViewTextBoxColumn3.MinimumWidth = 10;
+            this.артикулDataGridViewTextBoxColumn3.Name = "артикулDataGridViewTextBoxColumn3";
+            this.артикулDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.артикулDataGridViewTextBoxColumn3.Width = 200;
+            // 
+            // названиеDataGridViewTextBoxColumn2
+            // 
+            this.названиеDataGridViewTextBoxColumn2.DataPropertyName = "Название";
+            this.названиеDataGridViewTextBoxColumn2.HeaderText = "Название";
+            this.названиеDataGridViewTextBoxColumn2.MinimumWidth = 10;
+            this.названиеDataGridViewTextBoxColumn2.Name = "названиеDataGridViewTextBoxColumn2";
+            this.названиеDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.названиеDataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // авторDataGridViewTextBoxColumn2
+            // 
+            this.авторDataGridViewTextBoxColumn2.DataPropertyName = "Автор";
+            this.авторDataGridViewTextBoxColumn2.HeaderText = "Автор";
+            this.авторDataGridViewTextBoxColumn2.MinimumWidth = 10;
+            this.авторDataGridViewTextBoxColumn2.Name = "авторDataGridViewTextBoxColumn2";
+            this.авторDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.авторDataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // showRecommendationByIdBindingSource
+            // 
+            this.showRecommendationByIdBindingSource.DataMember = "showRecommendationById";
+            this.showRecommendationByIdBindingSource.DataSource = this.salonDataSet;
+            // 
+            // recommendationNumberBox
+            // 
+            this.recommendationNumberBox.DataSource = this.showAllRecommendationsBindingSource;
+            this.recommendationNumberBox.DisplayMember = "Текст рекомендации";
+            this.recommendationNumberBox.FormattingEnabled = true;
+            this.recommendationNumberBox.Location = new System.Drawing.Point(276, 421);
+            this.recommendationNumberBox.Name = "recommendationNumberBox";
+            this.recommendationNumberBox.Size = new System.Drawing.Size(550, 33);
+            this.recommendationNumberBox.TabIndex = 7;
+            this.recommendationNumberBox.ValueMember = "Номер рекомендации";
+            this.recommendationNumberBox.SelectedIndexChanged += new System.EventHandler(this.recommendationNumberBox_SelectedIndexChanged);
+            // 
+            // showAllRecommendationsBindingSource
+            // 
+            this.showAllRecommendationsBindingSource.DataMember = "showAllRecommendations";
+            this.showAllRecommendationsBindingSource.DataSource = this.salonDataSet;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 424);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(273, 25);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Выберете рекомендацию:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(832, 3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(287, 25);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Конкретная рекомендация:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 3);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(207, 25);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Все рекомендации:";
             // 
             // dataGridView6
             // 
@@ -997,24 +1098,6 @@
             this.dataGridView6.RowTemplate.Height = 33;
             this.dataGridView6.Size = new System.Drawing.Size(818, 367);
             this.dataGridView6.TabIndex = 0;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 3);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(207, 25);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Все рекомендации:";
-            // 
-            // showAllRecommendationsBindingSource
-            // 
-            this.showAllRecommendationsBindingSource.DataMember = "showAllRecommendations";
-            this.showAllRecommendationsBindingSource.DataSource = this.salonDataSet;
-            // 
-            // showAllRecommendationsTableAdapter
-            // 
-            this.showAllRecommendationsTableAdapter.ClearBeforeFill = true;
             // 
             // номерРекомендацииDataGridViewTextBoxColumn
             // 
@@ -1061,91 +1144,6 @@
             this.датаИВремяРекомендацииDataGridViewTextBoxColumn.ReadOnly = true;
             this.датаИВремяРекомендацииDataGridViewTextBoxColumn.Width = 314;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(832, 3);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(287, 25);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Конкретная рекомендация:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 424);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(273, 25);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Выберете рекомендацию:";
-            // 
-            // recommendationNumberBox
-            // 
-            this.recommendationNumberBox.DataSource = this.showAllRecommendationsBindingSource;
-            this.recommendationNumberBox.DisplayMember = "Текст рекомендации";
-            this.recommendationNumberBox.FormattingEnabled = true;
-            this.recommendationNumberBox.Location = new System.Drawing.Point(276, 421);
-            this.recommendationNumberBox.Name = "recommendationNumberBox";
-            this.recommendationNumberBox.Size = new System.Drawing.Size(550, 33);
-            this.recommendationNumberBox.TabIndex = 7;
-            this.recommendationNumberBox.ValueMember = "Номер рекомендации";
-            this.recommendationNumberBox.SelectedIndexChanged += new System.EventHandler(this.recommendationNumberBox_SelectedIndexChanged);
-            // 
-            // dataGridView7
-            // 
-            this.dataGridView7.AllowUserToAddRows = false;
-            this.dataGridView7.AllowUserToDeleteRows = false;
-            this.dataGridView7.AutoGenerateColumns = false;
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.артикулDataGridViewTextBoxColumn3,
-            this.названиеDataGridViewTextBoxColumn2,
-            this.авторDataGridViewTextBoxColumn2});
-            this.dataGridView7.DataSource = this.showRecommendationByIdBindingSource;
-            this.dataGridView7.Location = new System.Drawing.Point(839, 42);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.ReadOnly = true;
-            this.dataGridView7.RowHeadersWidth = 82;
-            this.dataGridView7.RowTemplate.Height = 33;
-            this.dataGridView7.Size = new System.Drawing.Size(823, 367);
-            this.dataGridView7.TabIndex = 8;
-            // 
-            // showRecommendationByIdBindingSource
-            // 
-            this.showRecommendationByIdBindingSource.DataMember = "showRecommendationById";
-            this.showRecommendationByIdBindingSource.DataSource = this.salonDataSet;
-            // 
-            // showRecommendationByIdTableAdapter
-            // 
-            this.showRecommendationByIdTableAdapter.ClearBeforeFill = true;
-            // 
-            // артикулDataGridViewTextBoxColumn3
-            // 
-            this.артикулDataGridViewTextBoxColumn3.DataPropertyName = "Артикул";
-            this.артикулDataGridViewTextBoxColumn3.HeaderText = "Артикул";
-            this.артикулDataGridViewTextBoxColumn3.MinimumWidth = 10;
-            this.артикулDataGridViewTextBoxColumn3.Name = "артикулDataGridViewTextBoxColumn3";
-            this.артикулDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.артикулDataGridViewTextBoxColumn3.Width = 200;
-            // 
-            // названиеDataGridViewTextBoxColumn2
-            // 
-            this.названиеDataGridViewTextBoxColumn2.DataPropertyName = "Название";
-            this.названиеDataGridViewTextBoxColumn2.HeaderText = "Название";
-            this.названиеDataGridViewTextBoxColumn2.MinimumWidth = 10;
-            this.названиеDataGridViewTextBoxColumn2.Name = "названиеDataGridViewTextBoxColumn2";
-            this.названиеDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.названиеDataGridViewTextBoxColumn2.Width = 200;
-            // 
-            // авторDataGridViewTextBoxColumn2
-            // 
-            this.авторDataGridViewTextBoxColumn2.DataPropertyName = "Автор";
-            this.авторDataGridViewTextBoxColumn2.HeaderText = "Автор";
-            this.авторDataGridViewTextBoxColumn2.MinimumWidth = 10;
-            this.авторDataGridViewTextBoxColumn2.Name = "авторDataGridViewTextBoxColumn2";
-            this.авторDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.авторDataGridViewTextBoxColumn2.Width = 200;
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.dataGridView8);
@@ -1157,15 +1155,6 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Статусы";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 3);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(141, 25);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "Все статусы:";
             // 
             // dataGridView8
             // 
@@ -1184,15 +1173,6 @@
             this.dataGridView8.Size = new System.Drawing.Size(1661, 541);
             this.dataGridView8.TabIndex = 6;
             // 
-            // showAllStatusesBindingSource
-            // 
-            this.showAllStatusesBindingSource.DataMember = "showAllStatuses";
-            this.showAllStatusesBindingSource.DataSource = this.salonDataSet;
-            // 
-            // showAllStatusesTableAdapter
-            // 
-            this.showAllStatusesTableAdapter.ClearBeforeFill = true;
-            // 
             // текстСтатусаDataGridViewTextBoxColumn
             // 
             this.текстСтатусаDataGridViewTextBoxColumn.DataPropertyName = "Текст статуса";
@@ -1201,6 +1181,329 @@
             this.текстСтатусаDataGridViewTextBoxColumn.Name = "текстСтатусаDataGridViewTextBoxColumn";
             this.текстСтатусаDataGridViewTextBoxColumn.ReadOnly = true;
             this.текстСтатусаDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // showAllStatusesBindingSource
+            // 
+            this.showAllStatusesBindingSource.DataMember = "showAllStatuses";
+            this.showAllStatusesBindingSource.DataSource = this.salonDataSet;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 3);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(141, 25);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Все статусы:";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.employeeFirstName);
+            this.tabPage6.Controls.Add(this.employeeNumber);
+            this.tabPage6.Controls.Add(this.employeeSalary);
+            this.tabPage6.Controls.Add(this.employeeLastName);
+            this.tabPage6.Controls.Add(this.employeePassword);
+            this.tabPage6.Controls.Add(this.employeeLogin);
+            this.tabPage6.Controls.Add(this.label23);
+            this.tabPage6.Controls.Add(this.label22);
+            this.tabPage6.Controls.Add(this.label21);
+            this.tabPage6.Controls.Add(this.label20);
+            this.tabPage6.Controls.Add(this.label19);
+            this.tabPage6.Controls.Add(this.label18);
+            this.tabPage6.Controls.Add(this.updateEmployeeButton);
+            this.tabPage6.Controls.Add(this.registerEmployeeButton);
+            this.tabPage6.Controls.Add(this.dataGridView9);
+            this.tabPage6.Location = new System.Drawing.Point(8, 39);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1678, 945);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Сотрудники";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // employeeFirstName
+            // 
+            this.employeeFirstName.Location = new System.Drawing.Point(176, 540);
+            this.employeeFirstName.Name = "employeeFirstName";
+            this.employeeFirstName.Size = new System.Drawing.Size(272, 31);
+            this.employeeFirstName.TabIndex = 19;
+            // 
+            // employeeNumber
+            // 
+            this.employeeNumber.DataSource = this.showAllEmployeesBindingSource;
+            this.employeeNumber.DisplayMember = "Номер сотрудника";
+            this.employeeNumber.FormattingEnabled = true;
+            this.employeeNumber.Location = new System.Drawing.Point(175, 311);
+            this.employeeNumber.Name = "employeeNumber";
+            this.employeeNumber.Size = new System.Drawing.Size(271, 33);
+            this.employeeNumber.TabIndex = 18;
+            this.employeeNumber.ValueMember = "Номер сотрудника";
+            this.employeeNumber.SelectedIndexChanged += new System.EventHandler(this.employeeNumber_SelectedIndexChanged);
+            // 
+            // showAllEmployeesBindingSource
+            // 
+            this.showAllEmployeesBindingSource.DataMember = "showAllEmployees";
+            this.showAllEmployeesBindingSource.DataSource = this.salonDataSet;
+            // 
+            // employeeSalary
+            // 
+            this.employeeSalary.Location = new System.Drawing.Point(176, 657);
+            this.employeeSalary.Name = "employeeSalary";
+            this.employeeSalary.Size = new System.Drawing.Size(272, 31);
+            this.employeeSalary.TabIndex = 16;
+            // 
+            // employeeLastName
+            // 
+            this.employeeLastName.Location = new System.Drawing.Point(176, 601);
+            this.employeeLastName.Name = "employeeLastName";
+            this.employeeLastName.Size = new System.Drawing.Size(272, 31);
+            this.employeeLastName.TabIndex = 15;
+            // 
+            // employeePassword
+            // 
+            this.employeePassword.Location = new System.Drawing.Point(176, 486);
+            this.employeePassword.Name = "employeePassword";
+            this.employeePassword.Size = new System.Drawing.Size(272, 31);
+            this.employeePassword.TabIndex = 12;
+            // 
+            // employeeLogin
+            // 
+            this.employeeLogin.Location = new System.Drawing.Point(175, 436);
+            this.employeeLogin.Name = "employeeLogin";
+            this.employeeLogin.Size = new System.Drawing.Size(272, 31);
+            this.employeeLogin.TabIndex = 11;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(43, 657);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(113, 25);
+            this.label23.TabIndex = 10;
+            this.label23.Text = "Зарплата:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(46, 601);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(110, 25);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Фамилия:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(97, 543);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(59, 25);
+            this.label21.TabIndex = 8;
+            this.label21.Text = "Имя:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(31, 311);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(125, 25);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Сотрудник:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(64, 486);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(92, 25);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Пароль:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(79, 442);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(77, 25);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Логин:";
+            // 
+            // updateEmployeeButton
+            // 
+            this.updateEmployeeButton.Location = new System.Drawing.Point(1242, 89);
+            this.updateEmployeeButton.Name = "updateEmployeeButton";
+            this.updateEmployeeButton.Size = new System.Drawing.Size(339, 116);
+            this.updateEmployeeButton.TabIndex = 2;
+            this.updateEmployeeButton.Text = "Изменить данные существующего сотрудника";
+            this.updateEmployeeButton.UseVisualStyleBackColor = true;
+            this.updateEmployeeButton.Click += new System.EventHandler(this.updateEmployeeButton_Click);
+            // 
+            // registerEmployeeButton
+            // 
+            this.registerEmployeeButton.Location = new System.Drawing.Point(875, 89);
+            this.registerEmployeeButton.Name = "registerEmployeeButton";
+            this.registerEmployeeButton.Size = new System.Drawing.Size(339, 116);
+            this.registerEmployeeButton.TabIndex = 1;
+            this.registerEmployeeButton.Text = "Зарегистрировать нового сотрудника";
+            this.registerEmployeeButton.UseVisualStyleBackColor = true;
+            this.registerEmployeeButton.Click += new System.EventHandler(this.registerEmployeeButton_Click);
+            // 
+            // dataGridView9
+            // 
+            this.dataGridView9.AllowUserToAddRows = false;
+            this.dataGridView9.AllowUserToDeleteRows = false;
+            this.dataGridView9.AutoGenerateColumns = false;
+            this.dataGridView9.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView9.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.номерСотрудникаDataGridViewTextBoxColumn3,
+            this.имяDataGridViewTextBoxColumn1,
+            this.фамилияDataGridViewTextBoxColumn1,
+            this.зарплатаDataGridViewTextBoxColumn});
+            this.dataGridView9.DataSource = this.showAllEmployeesBindingSource;
+            this.dataGridView9.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView9.Name = "dataGridView9";
+            this.dataGridView9.ReadOnly = true;
+            this.dataGridView9.RowHeadersWidth = 82;
+            this.dataGridView9.RowTemplate.Height = 33;
+            this.dataGridView9.Size = new System.Drawing.Size(805, 285);
+            this.dataGridView9.TabIndex = 0;
+            // 
+            // номерСотрудникаDataGridViewTextBoxColumn3
+            // 
+            this.номерСотрудникаDataGridViewTextBoxColumn3.DataPropertyName = "Номер сотрудника";
+            this.номерСотрудникаDataGridViewTextBoxColumn3.HeaderText = "Номер";
+            this.номерСотрудникаDataGridViewTextBoxColumn3.MinimumWidth = 10;
+            this.номерСотрудникаDataGridViewTextBoxColumn3.Name = "номерСотрудникаDataGridViewTextBoxColumn3";
+            this.номерСотрудникаDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.номерСотрудникаDataGridViewTextBoxColumn3.Width = 123;
+            // 
+            // имяDataGridViewTextBoxColumn1
+            // 
+            this.имяDataGridViewTextBoxColumn1.DataPropertyName = "Имя";
+            this.имяDataGridViewTextBoxColumn1.HeaderText = "Имя";
+            this.имяDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.имяDataGridViewTextBoxColumn1.Name = "имяDataGridViewTextBoxColumn1";
+            this.имяDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.имяDataGridViewTextBoxColumn1.Width = 98;
+            // 
+            // фамилияDataGridViewTextBoxColumn1
+            // 
+            this.фамилияDataGridViewTextBoxColumn1.DataPropertyName = "Фамилия";
+            this.фамилияDataGridViewTextBoxColumn1.HeaderText = "Фамилия";
+            this.фамилияDataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.фамилияDataGridViewTextBoxColumn1.Name = "фамилияDataGridViewTextBoxColumn1";
+            this.фамилияDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.фамилияDataGridViewTextBoxColumn1.Width = 149;
+            // 
+            // зарплатаDataGridViewTextBoxColumn
+            // 
+            this.зарплатаDataGridViewTextBoxColumn.DataPropertyName = "Зарплата";
+            this.зарплатаDataGridViewTextBoxColumn.HeaderText = "Зарплата";
+            this.зарплатаDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.зарплатаDataGridViewTextBoxColumn.Name = "зарплатаDataGridViewTextBoxColumn";
+            this.зарплатаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.зарплатаDataGridViewTextBoxColumn.Width = 152;
+            // 
+            // showAllRecordsTableAdapter
+            // 
+            this.showAllRecordsTableAdapter.ClearBeforeFill = true;
+            // 
+            // clientsTableAdapter1
+            // 
+            this.clientsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // showAllOrdersTableAdapter
+            // 
+            this.showAllOrdersTableAdapter.ClearBeforeFill = true;
+            // 
+            // showOrderByIdTableAdapter
+            // 
+            this.showOrderByIdTableAdapter.ClearBeforeFill = true;
+            // 
+            // showOrdersByClientEmailTableAdapter
+            // 
+            this.showOrdersByClientEmailTableAdapter.ClearBeforeFill = true;
+            // 
+            // showAllClientsTableAdapter
+            // 
+            this.showAllClientsTableAdapter.ClearBeforeFill = true;
+            // 
+            // showAllReviewsTableAdapter
+            // 
+            this.showAllReviewsTableAdapter.ClearBeforeFill = true;
+            // 
+            // showAllRecommendationsTableAdapter
+            // 
+            this.showAllRecommendationsTableAdapter.ClearBeforeFill = true;
+            // 
+            // showRecommendationByIdTableAdapter
+            // 
+            this.showRecommendationByIdTableAdapter.ClearBeforeFill = true;
+            // 
+            // showAllStatusesTableAdapter
+            // 
+            this.showAllStatusesTableAdapter.ClearBeforeFill = true;
+            // 
+            // showAllEmployeesTableAdapter
+            // 
+            this.showAllEmployeesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.updateAdminButton);
+            this.tabPage7.Controls.Add(this.adminPassword);
+            this.tabPage7.Controls.Add(this.adminLogin);
+            this.tabPage7.Controls.Add(this.label25);
+            this.tabPage7.Controls.Add(this.label24);
+            this.tabPage7.Location = new System.Drawing.Point(8, 39);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1678, 945);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Данные авторизации";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(39, 60);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(77, 25);
+            this.label24.TabIndex = 6;
+            this.label24.Text = "Логин:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(24, 141);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(92, 25);
+            this.label25.TabIndex = 7;
+            this.label25.Text = "Пароль:";
+            // 
+            // adminLogin
+            // 
+            this.adminLogin.Location = new System.Drawing.Point(131, 57);
+            this.adminLogin.Name = "adminLogin";
+            this.adminLogin.Size = new System.Drawing.Size(208, 31);
+            this.adminLogin.TabIndex = 8;
+            // 
+            // adminPassword
+            // 
+            this.adminPassword.Location = new System.Drawing.Point(131, 141);
+            this.adminPassword.Name = "adminPassword";
+            this.adminPassword.Size = new System.Drawing.Size(208, 31);
+            this.adminPassword.TabIndex = 8;
+            // 
+            // updateAdminButton
+            // 
+            this.updateAdminButton.Location = new System.Drawing.Point(428, 69);
+            this.updateAdminButton.Name = "updateAdminButton";
+            this.updateAdminButton.Size = new System.Drawing.Size(398, 88);
+            this.updateAdminButton.TabIndex = 9;
+            this.updateAdminButton.Text = "Обновить данные авторизации администратора";
+            this.updateAdminButton.UseVisualStyleBackColor = true;
+            this.updateAdminButton.Click += new System.EventHandler(this.updateAdminButton_Click);
             // 
             // AdminForm
             // 
@@ -1234,14 +1537,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showAllRecommendationsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showRecommendationByIdBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllRecommendationsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showAllStatusesBindingSource)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showAllEmployeesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1356,5 +1665,33 @@
         private System.Windows.Forms.BindingSource showAllStatusesBindingSource;
         private SalonDataSetTableAdapters.showAllStatusesTableAdapter showAllStatusesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn текстСтатусаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.DataGridView dataGridView9;
+        private System.Windows.Forms.BindingSource showAllEmployeesBindingSource;
+        private SalonDataSetTableAdapters.showAllEmployeesTableAdapter showAllEmployeesTableAdapter;
+        private System.Windows.Forms.TextBox employeeFirstName;
+        private System.Windows.Forms.ComboBox employeeNumber;
+        private System.Windows.Forms.TextBox employeeSalary;
+        private System.Windows.Forms.TextBox employeeLastName;
+        private System.Windows.Forms.TextBox employeePassword;
+        private System.Windows.Forms.TextBox employeeLogin;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button updateEmployeeButton;
+        private System.Windows.Forms.Button registerEmployeeButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерСотрудникаDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn имяDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn фамилияDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn зарплатаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Button updateAdminButton;
+        private System.Windows.Forms.TextBox adminPassword;
+        private System.Windows.Forms.TextBox adminLogin;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
     }
 }
