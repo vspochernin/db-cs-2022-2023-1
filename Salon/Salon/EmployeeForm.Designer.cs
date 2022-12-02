@@ -1477,6 +1477,7 @@
             this.dataGridView8.AllowUserToAddRows = false;
             this.dataGridView8.AllowUserToDeleteRows = false;
             this.dataGridView8.AutoGenerateColumns = false;
+            this.dataGridView8.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.текстСтатусаDataGridViewTextBoxColumn});
@@ -1496,7 +1497,7 @@
             this.текстСтатусаDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.текстСтатусаDataGridViewTextBoxColumn.Name = "текстСтатусаDataGridViewTextBoxColumn";
             this.текстСтатусаDataGridViewTextBoxColumn.ReadOnly = true;
-            this.текстСтатусаDataGridViewTextBoxColumn.Width = 200;
+            this.текстСтатусаDataGridViewTextBoxColumn.Width = 197;
             // 
             // showAllStatusesBindingSource
             // 

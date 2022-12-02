@@ -1161,6 +1161,7 @@
             this.dataGridView8.AllowUserToAddRows = false;
             this.dataGridView8.AllowUserToDeleteRows = false;
             this.dataGridView8.AutoGenerateColumns = false;
+            this.dataGridView8.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.текстСтатусаDataGridViewTextBoxColumn});
@@ -1180,7 +1181,7 @@
             this.текстСтатусаDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.текстСтатусаDataGridViewTextBoxColumn.Name = "текстСтатусаDataGridViewTextBoxColumn";
             this.текстСтатусаDataGridViewTextBoxColumn.ReadOnly = true;
-            this.текстСтатусаDataGridViewTextBoxColumn.Width = 200;
+            this.текстСтатусаDataGridViewTextBoxColumn.Width = 197;
             // 
             // showAllStatusesBindingSource
             // 
@@ -1414,7 +1415,7 @@
             this.tabPage7.Location = new System.Drawing.Point(8, 39);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1678, 945);
+            this.tabPage7.Size = new System.Drawing.Size(2765, 945);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Данные авторизации";
             this.tabPage7.UseVisualStyleBackColor = true;
