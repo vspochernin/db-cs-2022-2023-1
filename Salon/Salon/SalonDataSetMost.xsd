@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SalonDataSetMost" targetNamespace="http://tempuri.org/SalonDataSetMost.xsd" xmlns:mstns="http://tempuri.org/SalonDataSetMost.xsd" xmlns="http://tempuri.org/SalonDataSetMost.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SalonConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SalonConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Salon.Properties.Settings.GlobalReference.Default.SalonConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="showMostPurchasedTableAdapter" GeneratorDataComponentClassName="showMostPurchasedTableAdapter" Name="showMostPurchased" UserDataComponentName="showMostPurchasedTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SalonConnectionString (Settings)" DbObjectName="Salon.dbo.showMostPurchased" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Артикул, Название, Автор, Цена, [Количество продаж] FROM dbo.showMostPurchased</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Артикул" DataSetColumn="Артикул" />
+              <Mapping SourceColumn="Название" DataSetColumn="Название" />
+              <Mapping SourceColumn="Автор" DataSetColumn="Автор" />
+              <Mapping SourceColumn="Цена" DataSetColumn="Цена" />
+              <Mapping SourceColumn="Количество продаж" DataSetColumn="Количество продаж" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SalonDataSetMost" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="SalonDataSetMost" msprop:Generator_DataSetName="SalonDataSetMost">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="showMostPurchased" msprop:Generator_RowEvHandlerName="showMostPurchasedRowChangeEventHandler" msprop:Generator_RowDeletedName="showMostPurchasedRowDeleted" msprop:Generator_RowDeletingName="showMostPurchasedRowDeleting" msprop:Generator_RowEvArgName="showMostPurchasedRowChangeEvent" msprop:Generator_TablePropName="showMostPurchased" msprop:Generator_RowChangedName="showMostPurchasedRowChanged" msprop:Generator_RowChangingName="showMostPurchasedRowChanging" msprop:Generator_TableClassName="showMostPurchasedDataTable" msprop:Generator_RowClassName="showMostPurchasedRow" msprop:Generator_TableVarName="tableshowMostPurchased" msprop:Generator_UserTableName="showMostPurchased">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Артикул" msprop:Generator_ColumnPropNameInRow="Артикул" msprop:Generator_ColumnPropNameInTable="АртикулColumn" msprop:Generator_ColumnVarNameInTable="columnАртикул" msprop:Generator_UserColumnName="Артикул" type="xs:int" />
+              <xs:element name="Название" msprop:Generator_ColumnPropNameInRow="Название" msprop:Generator_ColumnPropNameInTable="НазваниеColumn" msprop:Generator_ColumnVarNameInTable="columnНазвание" msprop:Generator_UserColumnName="Название">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Автор" msprop:Generator_ColumnPropNameInRow="Автор" msprop:Generator_ColumnPropNameInTable="АвторColumn" msprop:Generator_ColumnVarNameInTable="columnАвтор" msprop:Generator_UserColumnName="Автор">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Цена" msprop:Generator_ColumnPropNameInRow="Цена" msprop:Generator_ColumnPropNameInTable="ЦенаColumn" msprop:Generator_ColumnVarNameInTable="columnЦена" msprop:Generator_UserColumnName="Цена" type="xs:decimal" />
+              <xs:element name="Количество_x0020_продаж" msprop:Generator_ColumnPropNameInRow="Количество_продаж" msprop:Generator_ColumnPropNameInTable="Количество_продажColumn" msprop:Generator_ColumnVarNameInTable="columnКоличество_продаж" msprop:Generator_UserColumnName="Количество продаж" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:showMostPurchased" />
+      <xs:field xpath="mstns:Артикул" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

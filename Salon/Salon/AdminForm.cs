@@ -23,6 +23,8 @@ namespace Salon
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSetMost.showMostPurchased". При необходимости она может быть перемещена или удалена.
+            this.showMostPurchasedTableAdapter.Fill(this.salonDataSetMost.showMostPurchased);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSet.showAllEmployees". При необходимости она может быть перемещена или удалена.
             this.showAllEmployeesTableAdapter.Fill(this.salonDataSet.showAllEmployees);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "salonDataSet.showAllStatuses". При необходимости она может быть перемещена или удалена.
@@ -382,6 +384,11 @@ namespace Salon
             }
 
             dataBase.closeConnection();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.showMostPurchasedTableAdapter.Fill(this.salonDataSetMost.showMostPurchased);
         }
     }
 }

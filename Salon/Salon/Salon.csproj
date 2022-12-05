@@ -88,6 +88,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SalonDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SalonDataSetMost.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalonDataSetMost.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Hashing.cs" />
     <EmbeddedResource Include="ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
@@ -132,6 +137,17 @@
     </None>
     <None Include="SalonDataSet.xss">
       <DependentUpon>SalonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SalonDataSetMost.xsc">
+      <DependentUpon>SalonDataSetMost.xsd</DependentUpon>
+    </None>
+    <None Include="SalonDataSetMost.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalonDataSetMost.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalonDataSetMost.xss">
+      <DependentUpon>SalonDataSetMost.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
