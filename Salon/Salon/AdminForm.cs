@@ -69,7 +69,8 @@ namespace Salon
                 {
                     textBox_title.Text = recordTable.Rows[0][1].ToString();
                     textBox_author.Text = recordTable.Rows[0][2].ToString();
-                    textBox_price.Text = recordTable.Rows[0][3].ToString();
+                    string price = recordTable.Rows[0][3].ToString();
+                    textBox_price.Text = price.Substring(0, price.Length - 2);
                     numericUpDown_count.Value = decimal.Parse(recordTable.Rows[0][4].ToString());
                 }
 
@@ -109,6 +110,12 @@ namespace Salon
             string price = textBox_price.Text.Replace(",", ".");
             int count = (int)numericUpDown_count.Value;
 
+            if (price.Contains("-"))
+            {
+                MessageBox.Show("Сумма заказа не должна быть отрицательной", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string addRecordQuery = $"addRecord '{title}', '{author}', {price}, {count}";
             SqlCommand addRecordCommand = new SqlCommand(addRecordQuery, dataBase.getConnection());
 
@@ -140,6 +147,12 @@ namespace Salon
                 string author = textBox_author.Text;
                 string price = textBox_price.Text.Replace(",", ".");
                 int count = (int)numericUpDown_count.Value;
+
+                if (price.Contains("-"))
+                {
+                    MessageBox.Show("Сумма заказа не должна быть отрицательной", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 string updateRecordQuery = $"updateRecord {recordId}, '{title}', '{author}', {price}, {count}";
                 SqlCommand updateRecordCommand = new SqlCommand(updateRecordQuery, dataBase.getConnection());
