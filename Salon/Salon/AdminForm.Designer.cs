@@ -1181,7 +1181,7 @@
             this.текстСтатусаDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.текстСтатусаDataGridViewTextBoxColumn.Name = "текстСтатусаDataGridViewTextBoxColumn";
             this.текстСтатусаDataGridViewTextBoxColumn.ReadOnly = true;
-            this.текстСтатусаDataGridViewTextBoxColumn.Width = 197;
+            this.текстСтатусаDataGridViewTextBoxColumn.Width = 181;
             // 
             // showAllStatusesBindingSource
             // 
@@ -1513,7 +1513,7 @@
             this.ClientSize = new System.Drawing.Size(2805, 1016);
             this.Controls.Add(this.tabControl1);
             this.Name = "AdminForm";
-            this.Text = "AdminForm";
+            this.Text = "Меню администратора";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

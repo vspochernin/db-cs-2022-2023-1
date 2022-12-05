@@ -18,6 +18,7 @@ namespace Salon
         public EmployeeForm()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void EmployeeForm_Load(object sender, EventArgs e)

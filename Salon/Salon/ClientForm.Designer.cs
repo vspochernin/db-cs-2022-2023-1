@@ -1048,7 +1048,7 @@
             this.ClientSize = new System.Drawing.Size(2489, 1051);
             this.Controls.Add(this.tabControl1);
             this.Name = "ClientForm";
-            this.Text = "ClientForm";
+            this.Text = "Меню клиента";
             this.Load += new System.EventHandler(this.ClientForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showAllRecordsBindingSource)).EndInit();

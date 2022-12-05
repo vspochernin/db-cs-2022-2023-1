@@ -18,6 +18,7 @@ namespace Salon
         public AdminForm()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void AdminForm_Load(object sender, EventArgs e)

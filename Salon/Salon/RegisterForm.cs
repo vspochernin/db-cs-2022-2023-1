@@ -62,10 +62,12 @@ namespace Salon
                 else if (ex.Message.Contains("IX_clients"))
                 {
                     MessageBox.Show("Такой email уже существует!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } else if (ex.Message.Contains("check_phone"))
+                }
+                else if (ex.Message.Contains("check_phone"))
                 {
                     MessageBox.Show("Некорректный номер телефона!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Некорректно введены данные!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
