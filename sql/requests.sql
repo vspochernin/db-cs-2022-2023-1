@@ -752,3 +752,30 @@ GO
 EXEC removeRecommendation 2;
 
 GO
+
+/*ЗАПРОС НА СТАТИСТИКУ*/
+
+/*Вывести 10 самых продаваемых треков*/
+
+CREATE VIEW showMostPurchased AS
+	SELECT TOP 10
+	records.record_id AS Артикул, title AS Название, author AS Автор, price AS Цена, SUM(orders_records.count) AS 'Количество продаж'
+	FROM records
+	JOIN orders_records ON orders_records.record_id = records.record_id
+	JOIN orders ON orders.order_id = orders_records.order_id
+	WHERE orders.status_id = 2
+	GROUP BY records.record_id, title, author, price
+	ORDER BY 'Количество продаж' DESC;
+
+GO
+
+SELECT records.record_id AS Артикул, title AS Название, author AS Автор, price AS Цена, orders_records.count AS 'Количество продаж', orders_records.order_id AS 'Номер заказа'
+FROM records
+JOIN orders_records ON orders_records.record_id = records.record_id
+JOIN orders ON orders.order_id = orders_records.order_id
+WHERE orders.status_id = 2;
+
+SELECT * FROM showMostPurchased;
+
+
+
