@@ -203,6 +203,15 @@ namespace Salon
             else
             {
 
+                DateTime selected = monthCalendar_dob.SelectionRange.Start;
+                DateTime now = DateTime.Today;
+
+                if (now.AddYears(-14) <= selected)
+                {
+                    MessageBox.Show("Вам должно быть больше 14ти лет!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 string login = textBox_login.Text;
                 string password = (newPassword != null && newPassword != "") ? Hashing.hashPassword(newPassword) : hashOldPassword;
                 string first_name = textBox_first_name.Text;

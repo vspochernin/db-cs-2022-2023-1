@@ -31,6 +31,15 @@ namespace Salon
             database.openConnection();
             SqlDataAdapter adapter = new SqlDataAdapter();
 
+            DateTime selected = monthCalendar_dob.SelectionRange.Start;
+            DateTime now = DateTime.Today;
+
+            if (now.AddYears(-14) <= selected)
+            {
+                MessageBox.Show("Вам должно быть больше 14ти лет!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string login = textBox_login.Text;
             string password = Hashing.hashPassword(textBox_password.Text);
             string first_name = textBox_first_name.Text;
